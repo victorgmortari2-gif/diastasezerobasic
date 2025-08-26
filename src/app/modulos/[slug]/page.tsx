@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle, Video, FileText, Activity } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Video, FileText, Activity, BookText, GraduationCap } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 export default function ModulePage({ params }: { params: { slug: string } }) {
@@ -17,9 +17,10 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
 
   const contentTypeIcon = (type: string) => {
     switch (type) {
-        case 'Vídeo': return <Video className="h-5 w-5 text-primary" />;
-        case 'Texto': return <FileText className="h-5 w-5 text-primary" />;
-        case 'Exercício': return <Activity className="h-5 w-5 text-primary" />;
+        case 'Vídeo Aula': return <Video className="h-6 w-6 text-primary" />;
+        case 'Exercício': return <Activity className="h-6 w-6 text-primary" />;
+        case 'Material': return <BookText className="h-6 w-6 text-primary" />;
+        case 'Avaliação': return <GraduationCap className="h-6 w-6 text-primary" />;
         default: return null;
     }
   }
@@ -50,27 +51,30 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-lg">{module.longDescription}</p>
         </section>
 
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid lg:grid-cols-3 gap-12">
           {/* Main Content: Schedule */}
-          <div className="md:col-span-2">
+          <div className="lg:col-span-2">
             <h2 className="font-headline text-2xl font-bold mb-6">Conteúdo Programático da Semana</h2>
-            <div className="space-y-6">
+            <div className="space-y-4">
                 {module.schedule.map(item => (
-                    <Card key={item.day} className="transition-shadow duration-300 hover:shadow-lg">
-                        <CardHeader className="flex flex-row items-center justify-between pb-2">
-                           <CardTitle className="text-lg font-bold flex items-center gap-3">
-                                {contentTypeIcon(item.type)}
-                                {item.title}
-                           </CardTitle>
-                           <Badge variant="secondary" className="hidden sm:inline-flex">
-                             {item.duration}
-                           </Badge>
-                        </CardHeader>
-                        <CardContent>
-                            <div className="flex items-center justify-between text-sm text-muted-foreground">
-                                <span>Dia {item.day}</span>
-                                <Badge variant="outline" className="sm:hidden">{item.duration}</Badge>
-                            </div>
+                    <Card key={item.day} className="transition-shadow duration-300 hover:shadow-lg bg-white">
+                        <CardContent className="p-4 md:p-6 flex items-start gap-4 md:gap-6">
+                           <div className="flex flex-col items-center">
+                                <div className="flex items-center justify-center h-10 w-10 rounded-full bg-primary/10 text-primary font-bold text-lg">
+                                    {item.day}
+                                </div>
+                           </div>
+                           <div className="flex-grow">
+                                <div className="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                                    <div className="flex items-center gap-3">
+                                        {contentTypeIcon(item.type)}
+                                        <h3 className="font-bold text-base md:text-lg">{item.type}</h3>
+                                    </div>
+                                    <Badge variant="secondary" className="mt-2 sm:mt-0">{item.duration}</Badge>
+                                </div>
+                                <h4 className="font-headline text-lg md:text-xl font-semibold text-foreground mb-1">{item.title}</h4>
+                                <p className="text-muted-foreground text-sm md:text-base">{item.description}</p>
+                           </div>
                         </CardContent>
                     </Card>
                 ))}
@@ -113,5 +117,3 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
     </div>
   );
 }
-
-    
