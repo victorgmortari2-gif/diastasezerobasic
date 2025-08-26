@@ -1,123 +1,238 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Leaf, HeartPulse, Sparkles, ChevronDown } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { CheckCircle, Award, BookOpen, Gift, Zap, Users, Lock, Clock, ArrowRight, Star, Heart, TrendingUp, Monitor, Zap as ZapIcon } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-[100dvh] bg-background">
+    <div className="flex flex-col min-h-screen bg-background text-foreground">
       <main className="flex-1">
-        <section className="relative w-full h-[80vh] min-h-[500px] flex items-center justify-center text-center text-white">
-          <Image
-            src="https://picsum.photos/1920/1080"
-            alt="Mulher se alongando em um ambiente natural"
-            fill
-            className="object-cover -z-10"
-            data-ai-hint="woman stretching"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/60 -z-10" />
+        {/* Hero Section */}
+        <section className="bg-primary/10 py-12 md:py-20 text-center">
           <div className="container px-4 md:px-6">
-            <div className="space-y-6 max-w-3xl mx-auto">
-              <h1 className="font-headline text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-                Bem-vinda ao Diástase ZERO
-              </h1>
-              <p className="text-lg md:text-xl text-primary-foreground/90">
-                Recupere sua força e confiança com nosso programa de 21 dias, desenhado por especialistas para fechar a diástase abdominal de forma segura e eficaz.
-              </p>
-              <div className="flex justify-center">
-                <Button asChild size="lg" className="font-bold group">
-                  <a href="#programa">
-                    Conheça o Programa
-                    <ChevronDown className="ml-2 h-5 w-5 transition-transform group-hover:translate-y-1" />
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="programa" className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center justify-center space-y-4 text-center mb-12">
-              <div className="inline-block rounded-lg bg-accent/20 px-3 py-1 text-sm text-accent-foreground font-semibold">
-                O Programa
-              </div>
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">
-                Transformação em 21 Dias
-              </h2>
-              <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Nosso método exclusivo combina exercícios específicos, orientação nutricional e suporte contínuo para garantir que você alcance os melhores resultados.
-              </p>
-            </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 lg:grid-cols-2 lg:gap-12">
+            <h1 className="font-headline text-3xl md:text-5xl font-bold text-primary">
+              Bem-vinda ao Desafio Básico do Diástase Zero em 21 Dias
+            </h1>
+            <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
+              Transforme sua barriga e recupere sua autoestima com exercícios simples, rápidos e eficientes.
+            </p>
+            <Button size="lg" className="mt-6 font-bold" asChild>
+              <a href="#modulos">ACESSAR MÓDULOS</a>
+            </Button>
+            <div className="relative mt-8 max-w-4xl mx-auto">
               <Image
-                src="https://picsum.photos/600/600"
-                width="600"
-                height="600"
-                alt="Transformação antes e depois"
-                className="mx-auto aspect-square overflow-hidden rounded-xl object-cover shadow-lg"
-                data-ai-hint="fitness transformation"
+                src="https://picsum.photos/1200/600"
+                alt="Mulher praticando exercícios de recuperação abdominal"
+                width={1200}
+                height={600}
+                className="rounded-xl shadow-2xl"
+                data-ai-hint="woman abs recovery"
               />
-              <div className="flex flex-col justify-center space-y-4">
-                <ul className="grid gap-6">
-                  <li>
-                    <div className="grid gap-2">
-                      <div className="flex items-center gap-3">
-                        <div className="bg-primary/10 p-2 rounded-full">
-                            <Leaf className="h-6 w-6 text-primary" />
-                        </div>
-                        <h3 className="text-xl font-bold font-headline">Exercícios Focados</h3>
-                      </div>
-                      <p className="text-muted-foreground ml-11">
-                        Rotinas diárias de 15 minutos que você pode fazer em qualquer lugar, sem necessidade de equipamentos.
-                      </p>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="grid gap-2">
-                      <div className="flex items-center gap-3">
-                        <div className="bg-primary/10 p-2 rounded-full">
-                            <HeartPulse className="h-6 w-6 text-primary" />
-                        </div>
-                        <h3 className="text-xl font-bold font-headline">Guia Nutricional</h3>
-                      </div>
-                      <p className="text-muted-foreground ml-11">
-                        Planos alimentares simples e deliciosos que promovem a cura e o bem-estar de dentro para fora.
-                      </p>
-                    </div>
-                  </li>
-                  <li>
-                    <div className="grid gap-2">
-                        <div className="flex items-center gap-3">
-                            <div className="bg-primary/10 p-2 rounded-full">
-                                <Sparkles className="h-6 w-6 text-primary" />
-                            </div>
-                            <h3 className="text-xl font-bold font-headline">Resultados Visíveis</h3>
-                        </div>
-                      <p className="text-muted-foreground ml-11">
-                        Junte-se a milhares de mulheres que transformaram seus corpos e recuperaram a autoestima.
-                      </p>
-                    </div>
-                  </li>
-                </ul>
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-xl"></div>
+              <div className="absolute bottom-4 left-4 right-4 text-left p-4 bg-black/50 backdrop-blur-sm rounded-lg">
+                <p className="font-bold text-white text-lg">
+                  Placeholder - 21 dias de transformação
+                </p>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-accent/20">
-            <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
-                <div className="space-y-3">
-                    <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">
-                        Pronta para começar sua jornada?
-                    </h2>
-                    <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                        Dê o primeiro passo para um abdômen mais forte e uma vida mais saudável. Seu corpo merece esse cuidado.
+        {/* Journey Section */}
+        <section className="py-12 md:py-24">
+          <div className="container px-4 md:px-6 text-center">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold">Sua Jornada de Transformação</h2>
+            <p className="mt-4 max-w-3xl mx-auto text-muted-foreground md:text-xl">
+              Durante 21 dias, você terá acesso a módulos exclusivos que vão te guiar passo a passo para acabar com a diástase e conquistar um abdômen firme e saudável.
+            </p>
+            <div className="mt-10 grid gap-8 md:grid-cols-3 max-w-5xl mx-auto">
+              <div className="flex flex-col items-center">
+                <TrendingUp className="h-10 w-10 text-primary" />
+                <h3 className="mt-4 font-bold text-xl font-headline">Progressivo</h3>
+                <p className="mt-2 text-muted-foreground">Cada módulo evolui com você</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <Monitor className="h-10 w-10 text-primary" />
+                <h3 className="mt-4 font-bold text-xl font-headline">Acessível</h3>
+                <p className="mt-2 text-muted-foreground">Em qualquer dispositivo</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <ZapIcon className="h-10 w-10 text-primary" />
+                <h3 className="mt-4 font-bold text-xl font-headline">Prático</h3>
+                <p className="mt-2 text-muted-foreground">Exercícios rápidos e eficientes</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Modules Section */}
+        <section id="modulos" className="py-12 md:py-24 bg-accent/20">
+          <div className="container px-4 md:px-6">
+            <h2 className="text-center font-headline text-3xl md:text-4xl font-bold mb-10">
+              Conheça os Módulos do Desafio
+            </h2>
+            <div className="grid gap-8 md:grid-cols-3">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="font-headline">Módulo 1 – Reconexão com o Core</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-muted-foreground list-disc list-inside">
+                    <li>Introdução à diástase</li>
+                    <li>Respiração diafragmática guiada</li>
+                    <li>Ativação do transverso abdominal</li>
+                    <li>Alongamentos posturais</li>
+                    <li>Mini plano alimentar anti-inflamatório</li>
+                  </ul>
+                  <Button variant="outline" className="mt-6 w-full">Acessar módulo</Button>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="font-headline">Módulo 2 – Fortalecimento Base</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-muted-foreground list-disc list-inside">
+                    <li>Ponte, dead bug, elevação de quadril</li>
+                    <li>Dicas práticas de ergonomia no dia a dia</li>
+                    <li>Alimentos cicatrizantes para o abdômen</li>
+                    <li>Aula gravada: "Erros comuns da diástase"</li>
+                  </ul>
+                  <Button variant="outline" className="mt-6 w-full">Acessar módulo</Button>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="font-headline">Módulo 3 – Estabilidade e Hábitos</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2 text-muted-foreground list-disc list-inside">
+                    <li>Treino diário com 5 exercícios</li>
+                    <li>Rotina de sono e autocuidado</li>
+                    <li>Check-list de hábitos saudáveis</li>
+                    <li>Aula: "Como manter os resultados"</li>
+                  </ul>
+                  <Button variant="outline" className="mt-6 w-full">Acessar módulo</Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Premium Upgrade Section */}
+        <section className="py-12 md:py-24">
+          <div className="container px-4 md:px-6">
+            <div className="text-center">
+              <h2 className="font-headline text-3xl md:text-4xl font-bold">
+                Preparada para acelerar a transformação da sua barriga e conquistar bônus exclusivos?
+              </h2>
+            </div>
+            <Card className="mt-10 bg-primary text-primary-foreground border-2 border-accent shadow-xl">
+              <CardContent className="p-6 md:p-10">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <div className="inline-block bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-bold">
+                      POR APENAS R$ 12,90
+                    </div>
+                    <h3 className="font-headline text-3xl font-bold mt-4">Upgrade para o Desafio Premium</h3>
+                    <p className="mt-2 text-primary-foreground/90">
+                      Está gostando do Desafio Básico? Então aproveite esta oferta única e desbloqueie acesso imediato ao Desafio Premium com todos os módulos avançados e bônus exclusivos.
                     </p>
+                    <div className="mt-8 text-center bg-background/10 p-6 rounded-lg">
+                       <p className="font-headline text-2xl font-bold text-accent">🔥 OFERTA ESPECIAL</p>
+                       <p className="text-5xl font-bold mt-2">R$ 12,90</p>
+                       <p className="text-lg line-through opacity-80">de R$ 79,90</p>
+                       <p className="text-sm font-bold bg-accent text-accent-foreground rounded-full px-3 py-1 inline-block mt-2">85% OFF</p>
+                       <Button size="lg" className="mt-6 w-full font-bold text-lg bg-accent text-accent-foreground hover:bg-accent/90">
+                          👉 SIM, QUERO O PREMIUM!
+                       </Button>
+                       <p className="text-xs mt-4 flex items-center justify-center gap-4">
+                          <span className="flex items-center gap-1"><Clock className="h-3 w-3" /> Oferta por tempo limitado</span>
+                          <span className="flex items-center gap-1"><Lock className="h-3 w-3" /> Pagamento 100% seguro</span>
+                        </p>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-headline text-xl font-bold mb-4">O que você recebe no Premium:</h4>
+                    <ul className="space-y-3 text-sm">
+                      <li className="flex gap-3"><CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Diagnóstico e Respiração Avançada:</span> Autoteste, hipopressiva, ativação do core profundo e cardápio detox.</span></li>
+                      <li className="flex gap-3"><CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Treino Intensivo e Estabilidade:</span> Progressão, workshop "Zere sua diástase" e suplementação.</span></li>
+                      <li className="flex gap-3"><CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Remodelagem Corporal:</span> Protocolo avançado, mentoria e plano de 60 dias pós-desafio.</span></li>
+                      <li className="flex gap-3"><CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Estética e Postura Feminina:</span> Exercícios para afinar cintura e alinhar postura.</span></li>
+                      <li className="flex gap-3"><CheckCircle className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Vida Real, Corpo Forte:</span> Guia de alimentação para mães e rotina de 20 minutos.</span></li>
+                    </ul>
+                    <h4 className="font-headline text-xl font-bold mt-6 mb-4">Super Bônus do Premium</h4>
+                    <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                        <li className="flex items-center gap-2">✨ Todo conteúdo do Desafio Básico</li>
+                        <li className="flex items-center gap-2">📚 E-book "Diástase Zero o Ano Todo"</li>
+                        <li className="flex items-center gap-2">🧘 Meditação guiada</li>
+                        <li className="flex items-center gap-2">💬 Grupo EXCLUSIVO no WhatsApp</li>
+                        <li className="flex items-center gap-2">🏆 Certificado digital de conclusão</li>
+                    </ul>
+                  </div>
                 </div>
-                <div className="flex justify-center">
-                    <Button size="lg" className="font-bold">
-                        Quero Iniciar a Transformação
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+
+        {/* Exclusive Offers Section */}
+        <section className="py-12 md:py-24 bg-accent/20">
+            <div className="container px-4 md:px-6">
+                <h2 className="text-center font-headline text-3xl md:text-4xl font-bold mb-4">Ofertas Exclusivas para Você</h2>
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+                    <Card>
+                        <CardHeader className="items-center">
+                            <Gift className="h-10 w-10 text-primary" />
+                            <CardTitle className="text-center font-headline text-xl">Plano Alimentar Personalizado</CardTitle>
+                        </CardHeader>
+                        <CardContent className="text-center">
+                            <p className="text-muted-foreground text-sm">Cardápio de 30 dias com receitas anti-inflamatórias, lista de compras e substituições.</p>
+                            <p className="text-sm line-through text-muted-foreground mt-4">De R$ 23,90</p>
+                            <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
+                            <Button className="mt-4 w-full">Adicionar ao meu acesso</Button>
+                        </CardContent>
+                    </Card>
+                    <Card>
+                        <CardHeader className="items-center">
+                            <BookOpen className="h-10 w-10 text-primary" />
+                            <CardTitle className="text-center font-headline text-xl">E-book Premium + Guia de Roupas</CardTitle>
+                        </CardHeader>
+                        <CardContent className="text-center">
+                            <p className="text-muted-foreground text-sm">Automassagem, postura e dicas de looks que afinam a silhueta e aumentam a confiança.</p>
+                            <p className="text-sm line-through text-muted-foreground mt-4">De R$ 23,90</p>
+                            <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
+                            <Button className="mt-4 w-full">Quero este guia</Button>
+                        </CardContent>
+                    </Card>
+                    <Card>
+                        <CardHeader className="items-center">
+                            <Award className="h-10 w-10 text-primary" />
+                            <CardTitle className="text-center font-headline text-xl">Programa Pós-Desafio</CardTitle>
+                        </CardHeader>
+                        <CardContent className="text-center">
+                            <p className="text-muted-foreground text-sm">Continuação de 60 dias com treinos, calendário e estratégias para manter os resultados.</p>
+                            <p className="text-sm line-through text-muted-foreground mt-4">De R$ 23,90</p>
+                            <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
+                            <Button className="mt-4 w-full">Continuar minha evolução</Button>
+                        </CardContent>
+                    </Card>
+                    <Card>
+                        <CardHeader className="items-center">
+                            <Zap className="h-10 w-10 text-primary" />
+                            <CardTitle className="text-center font-headline text-xl">Pack de Meditações Guiadas</CardTitle>
+                        </CardHeader>
+                        <CardContent className="text-center">
+                            <p className="text-muted-foreground text-sm">Áudios de 5–10 min para autoestima, foco e constância. Mais disciplina e equilíbrio emocional.</p>
+                            <p className="text-sm line-through text-muted-foreground mt-4">De R$ 23,90</p>
+                            <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
+                            <Button className="mt-4 w-full">Adicionar meditações</Button>
+                        </CardContent>
+                    </Card>
+                </div>
+                <div className="mt-10 text-center">
+                    <Button size="lg" className="font-bold text-lg">
+                        Adquira todas as ofertas por apenas R$ 18,90
                     </Button>
                 </div>
             </div>
