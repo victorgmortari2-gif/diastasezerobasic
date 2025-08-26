@@ -40,8 +40,8 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
             <Image 
                 src="https://i.imgur.com/VJtWx2S.png" 
                 alt="Diástase Zero Logo" 
-                width={50} 
-                height={50}
+                width={70} 
+                height={70}
                 className='mx-auto'
             />
           </Link>
