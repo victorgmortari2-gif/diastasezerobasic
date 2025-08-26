@@ -1,7 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { CheckCircle, Award, BookOpen, Gift, Zap, Users, Lock, Clock, ArrowRight, Star, Heart, TrendingUp, Monitor, Zap as ZapIcon, CircleCheckBig, HeartPulse, Dumbbell, Anchor } from "lucide-react";
+import { modules } from "@/lib/modules";
 
 export default function Home() {
   return (
@@ -26,7 +28,7 @@ export default function Home() {
                     Transforme sua barriga e recupere sua autoestima com exercícios simples, rápidos e eficientes.
                 </p>
                 <Button size="lg" className="mt-6 font-bold text-lg p-8 transition-transform duration-300 hover:scale-105" asChild>
-                    <a href="#modulos">ACESSAR MÓDULOS <ArrowRight className="ml-2 h-5 w-5" /></a>
+                    <Link href="#modulos">ACESSAR MÓDULOS <ArrowRight className="ml-2 h-5 w-5" /></Link>
                 </Button>
                 <div className="relative mt-8 max-w-4xl mx-auto">
                     <Image
@@ -87,76 +89,35 @@ export default function Home() {
                     </p>
                 </div>
                 <div className="mt-12 grid gap-8 md:grid-cols-3">
-                    <Card className="flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group bg-white">
-                        <CardHeader>
-                            <CardTitle className="font-headline flex items-center gap-3">
-                                <HeartPulse className="h-8 w-8 text-primary" />
-                                Módulo 1 – Reconexão
-                            </CardTitle>
-                            <CardDescription>Dias 1 a 7</CardDescription>
-                        </CardHeader>
-                        <CardContent className="flex-grow">
-                            <ul className="space-y-3 text-muted-foreground list-disc list-inside">
-                                <li>Introdução à diástase</li>
-                                <li>Respiração diafragmática guiada</li>
-                                <li>Ativação do transverso abdominal</li>
-                                <li>Alongamentos posturais</li>
-                                <li>Mini plano alimentar anti-inflamatório</li>
-                            </ul>
-                        </CardContent>
-                        <div className="p-6 pt-0 mt-4">
-                            <a href="#" className="font-bold text-primary flex items-center gap-2">
-                                Acessar módulo
-                                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-2" />
-                            </a>
-                        </div>
-                    </Card>
-                    <Card className="flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group bg-white">
-                        <CardHeader>
-                            <CardTitle className="font-headline flex items-center gap-3">
-                                <Dumbbell className="h-8 w-8 text-primary" />
-                                Módulo 2 – Fortalecimento
-                            </CardTitle>
-                             <CardDescription>Dias 8 a 14</CardDescription>
-                        </CardHeader>
-                        <CardContent className="flex-grow">
-                            <ul className="space-y-3 text-muted-foreground list-disc list-inside">
-                                <li>Exercícios: Ponte, dead bug, elevação de quadril</li>
-                                <li>Dicas práticas de ergonomia no dia a dia</li>
-                                <li>Alimentos cicatrizantes para o abdômen</li>
-                                <li>Aula gravada: "Erros comuns da diástase"</li>
-                            </ul>
-                        </CardContent>
-                        <div className="p-6 pt-0 mt-4">
-                           <a href="#" className="font-bold text-primary flex items-center gap-2">
-                                Acessar módulo
-                                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-2" />
-                            </a>
-                        </div>
-                    </Card>
-                    <Card className="flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group bg-white">
-                        <CardHeader>
-                            <CardTitle className="font-headline flex items-center gap-3">
-                                <Anchor className="h-8 w-8 text-primary" />
-                                Módulo 3 – Estabilidade
-                            </CardTitle>
-                            <CardDescription>Dias 15 a 21</CardDescription>
-                        </CardHeader>
-                        <CardContent className="flex-grow">
-                            <ul className="space-y-3 text-muted-foreground list-disc list-inside">
-                                <li>Treino diário com 5 exercícios evolutivos</li>
-                                <li>Rotina de sono e autocuidado para resultados</li>
-                                <li>Check-list de hábitos saudáveis</li>
-                                <li>Aula: "Como manter os resultados"</li>
-                            </ul>
-                        </CardContent>
-                        <div className="p-6 pt-0 mt-4">
-                            <a href="#" className="font-bold text-primary flex items-center gap-2">
-                                Acessar módulo
-                                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-2" />
-                            </a>
-                        </div>
-                    </Card>
+                    {modules.map((module) => {
+                      const Icon = module.icon;
+                      return (
+                        <Link href={`/modulos/${module.slug}`} key={module.slug} className="group">
+                          <Card className="flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 h-full bg-white">
+                              <CardHeader>
+                                  <CardTitle className="font-headline flex items-center gap-3">
+                                      <Icon className="h-8 w-8 text-primary" />
+                                      {module.title}
+                                  </CardTitle>
+                                  <CardDescription>{module.days}</CardDescription>
+                              </CardHeader>
+                              <CardContent className="flex-grow">
+                                  <ul className="space-y-3 text-muted-foreground list-disc list-inside">
+                                      {module.shortPoints.map((point, i) => (
+                                        <li key={i}>{point}</li>
+                                      ))}
+                                  </ul>
+                              </CardContent>
+                              <div className="p-6 pt-0 mt-4">
+                                  <span className="font-bold text-primary flex items-center gap-2">
+                                      Acessar módulo
+                                      <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-2" />
+                                  </span>
+                              </div>
+                          </Card>
+                        </Link>
+                      )
+                    })}
                 </div>
             </div>
         </section>
@@ -284,14 +245,16 @@ export default function Home() {
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
         <p className="text-xs text-muted-foreground">&copy; 2024 Diástase ZERO. Todos os direitos reservados.</p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <a href="#" className="text-xs hover:underline underline-offset-4 text-muted-foreground">
+          <Link href="#" className="text-xs hover:underline underline-offset-4 text-muted-foreground">
             Termos de Serviço
-          </a>
-          <a href="#" className="text-xs hover:underline underline-offset-4 text-muted-foreground">
+          </Link>
+          <Link href="#" className="text-xs hover:underline underline-offset-4 text-muted-foreground">
             Política de Privacidade
-          </a>
+          </Link>
         </nav>
       </footer>
     </div>
   );
 }
+
+    
