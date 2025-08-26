@@ -185,7 +185,7 @@ export default function Home() {
                        <p className="text-5xl font-bold mt-2">R$ 12,90</p>
                        <p className="text-lg line-through opacity-80">de R$ 79,90</p>
                        <p className="text-sm font-bold bg-accent text-accent-foreground rounded-full px-3 py-1 inline-block mt-2">85% OFF</p>
-                       <Button size="lg" className="mt-6 w-full font-bold text-lg bg-accent text-accent-foreground hover:bg-accent/90 transition-transform duration-300 hover:scale-105">
+                       <Button size="lg" className="mt-6 w-full font-bold text-lg bg-accent text-accent-foreground hover:bg-accent/90 animate-pulse-scale">
                           👉 SIM, QUERO O PREMIUM!
                        </Button>
                        <p className="text-xs mt-4 flex items-center justify-center gap-4">
