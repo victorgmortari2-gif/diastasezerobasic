@@ -20,7 +20,7 @@ export default function Home() {
                     />
                 </div>
                 <h1 className="font-headline text-3xl md:text-5xl font-bold text-foreground">
-                    Bem-vinda ao Desafio Básico do <span className="text-primary">Diástase Zero</span> em 21 Dias
+                    Bem-vinda ao Desafio Básico do <span className="text-primary">Diástase Zero</span>
                 </h1>
                 <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
                     Transforme sua barriga e recupere sua autoestima com exercícios simples, rápidos e eficientes.
@@ -76,7 +76,7 @@ export default function Home() {
         </section>
 
         {/* Modules Section */}
-        <section id="modulos" className="py-12 md:py-24 bg-beige">
+        <section id="modulos" className="py-12 md:py-24 bg-[#F9F5F2]">
             <div className="container px-4 md:px-6">
                 <div className="text-center">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold">
@@ -273,7 +273,7 @@ export default function Home() {
                     </Card>
                 </div>
                 <div className="mt-10 text-center">
-                    <Button size="lg" className="font-bold text-lg transition-transform duration-300 hover:scale-105">
+                    <Button size="lg" className="font-bold text-2xl p-8 animate-pulse-scale">
                         Adquira todas as ofertas por apenas R$ 18,90
                     </Button>
                 </div>
@@ -295,3 +295,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
