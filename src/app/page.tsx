@@ -181,7 +181,7 @@ export default function Home() {
                       Está gostando do Desafio Básico? Então aproveite esta oferta única e desbloqueie acesso imediato ao Desafio Premium com todos os módulos avançados e bônus exclusivos.
                     </p>
                     <div className="mt-8 text-center bg-background/20 p-6 rounded-lg">
-                       <p className="font-headline text-2xl font-bold text-accent">🔥 OFERTA ESPECIAL</p>
+                       <p className="font-headline text-2xl font-bold text-accent" style={{ textShadow: '0 0 5px black' }}>🔥 OFERTA ESPECIAL</p>
                        <p className="text-5xl font-bold mt-2">R$ 12,90</p>
                        <p className="text-lg line-through opacity-80">de R$ 79,90</p>
                        <p className="text-sm font-bold bg-accent text-accent-foreground rounded-full px-3 py-1 inline-block mt-2">85% OFF</p>
@@ -295,5 +295,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
