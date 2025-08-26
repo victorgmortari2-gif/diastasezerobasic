@@ -19,8 +19,8 @@ export default function Home() {
                         data-ai-hint="logo diastasis"
                     />
                 </div>
-                <h1 className="font-headline text-3xl md:text-5xl font-bold text-primary">
-                    Bem-vinda ao Desafio Básico do Diástase Zero em 21 Dias
+                <h1 className="font-headline text-3xl md:text-5xl font-bold text-foreground">
+                    Bem-vinda ao Desafio Básico do <span className="text-primary">Diástase Zero</span> em 21 Dias
                 </h1>
                 <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
                     Transforme sua barriga e recupere sua autoestima com exercícios simples, rápidos e eficientes.
