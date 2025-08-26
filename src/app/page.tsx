@@ -87,7 +87,7 @@ export default function Home() {
                     </p>
                 </div>
                 <div className="mt-12 grid gap-8 md:grid-cols-3">
-                    <Card className="flex flex-col">
+                    <Card className="flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
                         <CardHeader>
                             <CardTitle className="font-headline flex items-center gap-3">
                                 <span className="bg-primary text-primary-foreground rounded-full h-8 w-8 flex items-center justify-center font-bold text-sm">1</span>
@@ -105,10 +105,10 @@ export default function Home() {
                             </ul>
                         </CardContent>
                         <div className="p-6 pt-0 mt-4">
-                           <Button variant="outline" className="w-full">Acessar módulo</Button>
+                           <Button variant="outline" className="w-full transition-colors hover:bg-primary hover:text-primary-foreground">Acessar módulo</Button>
                         </div>
                     </Card>
-                    <Card className="flex flex-col">
+                    <Card className="flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
                         <CardHeader>
                             <CardTitle className="font-headline flex items-center gap-3">
                                 <span className="bg-primary text-primary-foreground rounded-full h-8 w-8 flex items-center justify-center font-bold text-sm">2</span>
@@ -125,10 +125,10 @@ export default function Home() {
                             </ul>
                         </CardContent>
                         <div className="p-6 pt-0 mt-4">
-                           <Button variant="outline" className="w-full">Acessar módulo</Button>
+                           <Button variant="outline" className="w-full transition-colors hover:bg-primary hover:text-primary-foreground">Acessar módulo</Button>
                         </div>
                     </Card>
-                    <Card className="flex flex-col">
+                    <Card className="flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
                         <CardHeader>
                             <CardTitle className="font-headline flex items-center gap-3">
                                  <span className="bg-primary text-primary-foreground rounded-full h-8 w-8 flex items-center justify-center font-bold text-sm">3</span>
@@ -145,7 +145,7 @@ export default function Home() {
                             </ul>
                         </CardContent>
                         <div className="p-6 pt-0 mt-4">
-                            <Button variant="outline" className="w-full">Acessar módulo</Button>
+                            <Button variant="outline" className="w-full transition-colors hover:bg-primary hover:text-primary-foreground">Acessar módulo</Button>
                         </div>
                     </Card>
                 </div>
