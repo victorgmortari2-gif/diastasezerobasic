@@ -25,7 +25,7 @@ export default function Home() {
                 <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
                     Transforme sua barriga e recupere sua autoestima com exercícios simples, rápidos e eficientes.
                 </p>
-                <Button size="lg" className="mt-6 font-bold" asChild>
+                <Button size="lg" className="mt-6 font-bold transition-transform duration-300 hover:scale-105" asChild>
                     <a href="#modulos">ACESSAR MÓDULOS <ArrowRight className="ml-2 h-5 w-5" /></a>
                 </Button>
                 <div className="relative mt-8 max-w-4xl mx-auto">
@@ -176,7 +176,7 @@ export default function Home() {
                        <p className="text-5xl font-bold mt-2">R$ 12,90</p>
                        <p className="text-lg line-through opacity-80">de R$ 79,90</p>
                        <p className="text-sm font-bold bg-accent text-accent-foreground rounded-full px-3 py-1 inline-block mt-2">85% OFF</p>
-                       <Button size="lg" className="mt-6 w-full font-bold text-lg bg-accent text-accent-foreground hover:bg-accent/90">
+                       <Button size="lg" className="mt-6 w-full font-bold text-lg bg-accent text-accent-foreground hover:bg-accent/90 transition-transform duration-300 hover:scale-105">
                           👉 SIM, QUERO O PREMIUM!
                        </Button>
                        <p className="text-xs mt-4 flex items-center justify-center gap-4">
@@ -214,7 +214,7 @@ export default function Home() {
             <div className="container px-4 md:px-6">
                 <h2 className="text-center font-headline text-3xl md:text-4xl font-bold mb-4">Ofertas Exclusivas para Você</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-                    <Card>
+                    <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <CardHeader className="items-center">
                             <Gift className="h-10 w-10 text-primary" />
                             <CardTitle className="text-center font-headline text-xl">Plano Alimentar Personalizado</CardTitle>
@@ -223,10 +223,10 @@ export default function Home() {
                             <p className="text-muted-foreground text-sm">Cardápio de 30 dias com receitas anti-inflamatórias, lista de compras e substituições.</p>
                             <p className="text-sm line-through text-muted-foreground mt-4">De R$ 23,90</p>
                             <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
-                            <Button className="mt-4 w-full">Adicionar ao meu acesso</Button>
+                            <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Adicionar ao meu acesso</Button>
                         </CardContent>
                     </Card>
-                    <Card>
+                    <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <CardHeader className="items-center">
                             <BookOpen className="h-10 w-10 text-primary" />
                             <CardTitle className="text-center font-headline text-xl">E-book Premium + Guia de Roupas</CardTitle>
@@ -235,10 +235,10 @@ export default function Home() {
                             <p className="text-muted-foreground text-sm">Automassagem, postura e dicas de looks que afinam a silhueta e aumentam a confiança.</p>
                             <p className="text-sm line-through text-muted-foreground mt-4">De R$ 23,90</p>
                             <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
-                            <Button className="mt-4 w-full">Quero este guia</Button>
+                            <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Quero este guia</Button>
                         </CardContent>
                     </Card>
-                    <Card>
+                    <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <CardHeader className="items-center">
                             <Award className="h-10 w-10 text-primary" />
                             <CardTitle className="text-center font-headline text-xl">Programa Pós-Desafio</CardTitle>
@@ -247,10 +247,10 @@ export default function Home() {
                             <p className="text-muted-foreground text-sm">Continuação de 60 dias com treinos, calendário e estratégias para manter os resultados.</p>
                             <p className="text-sm line-through text-muted-foreground mt-4">De R$ 23,90</p>
                             <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
-                            <Button className="mt-4 w-full">Continuar minha evolução</Button>
+                            <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Continuar minha evolução</Button>
                         </CardContent>
                     </Card>
-                    <Card>
+                    <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <CardHeader className="items-center">
                             <Zap className="h-10 w-10 text-primary" />
                             <CardTitle className="text-center font-headline text-xl">Pack de Meditações Guiadas</CardTitle>
@@ -259,12 +259,12 @@ export default function Home() {
                             <p className="text-muted-foreground text-sm">Áudios de 5–10 min para autoestima, foco e constância. Mais disciplina e equilíbrio emocional.</p>
                             <p className="text-sm line-through text-muted-foreground mt-4">De R$ 23,90</p>
                             <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
-                            <Button className="mt-4 w-full">Adicionar meditações</Button>
+                            <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Adicionar meditações</Button>
                         </CardContent>
                     </Card>
                 </div>
                 <div className="mt-10 text-center">
-                    <Button size="lg" className="font-bold text-lg">
+                    <Button size="lg" className="font-bold text-lg transition-transform duration-300 hover:scale-105">
                         Adquira todas as ofertas por apenas R$ 18,90
                     </Button>
                 </div>
@@ -286,3 +286,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
