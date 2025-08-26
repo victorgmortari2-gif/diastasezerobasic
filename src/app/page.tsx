@@ -49,7 +49,7 @@ export default function Home() {
         </section>
         
         {/* Journey Section */}
-        <section className="bg-white py-16 sm:py-24">
+        <section className="bg-white py-16 px-4 sm:py-24">
           <div className="container px-4 text-center">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">Sua Jornada de Transformação</h2>
             <p className="mt-4 max-w-3xl mx-auto text-muted-foreground md:text-xl">
@@ -162,7 +162,7 @@ export default function Home() {
         </section>
         
         {/* Premium Upgrade Section */}
-        <section className="py-12 md:py-24">
+        <section className="py-12 md:py-24 bg-white">
           <div className="container px-4 md:px-6">
             <div className="text-center">
               <h2 className="font-headline text-3xl md:text-4xl font-bold">
