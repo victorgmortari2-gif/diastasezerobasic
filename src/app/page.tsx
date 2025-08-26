@@ -49,8 +49,8 @@ export default function Home() {
         </section>
         
         {/* Journey Section */}
-        <section className="py-12 md:py-24">
-          <div className="container px-4 md:px-6 text-center">
+        <section className="bg-white py-16 sm:py-24">
+          <div className="container px-4 text-center">
             <h2 className="font-headline text-3xl md:text-4xl font-bold">Sua Jornada de Transformação</h2>
             <p className="mt-4 max-w-3xl mx-auto text-muted-foreground md:text-xl">
               Durante 21 dias, você terá acesso a módulos exclusivos que vão te guiar passo a passo para acabar com a diástase e conquistar um abdômen firme e saudável.
