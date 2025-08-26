@@ -1,4 +1,4 @@
-import { HeartPulse, Dumbbell, Anchor, LucideIcon, BookText, GraduationCap } from 'lucide-react';
+import { HeartPulse, Dumbbell, Anchor, LucideIcon } from 'lucide-react';
 
 export interface Module {
   slug: string;
@@ -10,10 +10,12 @@ export interface Module {
   objectives: string[];
   schedule: {
     day: number;
+    slug: string;
     title: string;
     type: 'Vídeo Aula' | 'Exercício' | 'Material' | 'Avaliação';
     duration: string;
     description: string;
+    videoUrl?: string;
   }[];
 }
 
@@ -39,13 +41,13 @@ export const modules: Module[] = [
         'Iniciar uma alimentação que ajuda a desinflamar o corpo.',
     ],
     schedule: [
-        { day: 1, title: 'Introdução à Diástase Abdominal', type: 'Vídeo Aula', duration: '15 min', description: 'Entenda o que é a diástase, suas causas e como ela afeta seu corpo.' },
-        { day: 2, title: 'Respiração Diafragmática Guiada', type: 'Exercício', duration: '10 min', description: 'Aprenda a técnica fundamental para ativação do core.' },
-        { day: 3, title: 'Ativação do Transverso Abdominal', type: 'Vídeo Aula', duration: '12 min', description: 'Técnicas para ativar o músculo mais profundo do abdômen.' },
-        { day: 4, title: 'Alongamentos Posturais', type: 'Exercício', duration: '15 min', description: 'Sequência de alongamentos para melhorar a postura.' },
-        { day: 5, title: 'Mini Plano Alimentar Anti-inflamatório', type: 'Material', duration: '5 min', description: 'Guia prático com alimentos que auxiliam na recuperação.' },
-        { day: 6, title: 'Prática Integrada - Semana 1', type: 'Exercício', duration: '20 min', description: 'Combinação de todos os exercícios aprendidos.' },
-        { day: 7, title: 'Autoavaliação e Planejamento', type: 'Avaliação', duration: '10 min', description: 'Reflita sobre seu progresso e planeje a próxima semana.' },
+        { day: 1, slug: 'introducao-diastase', title: 'Introdução à Diástase Abdominal', type: 'Vídeo Aula', duration: '15 min', description: 'Entenda o que é a diástase, suas causas e como ela afeta seu corpo.', videoUrl: 'https://www.youtube.com/embed/Ke9al-Aliyc' },
+        { day: 2, slug: 'respiracao-diafragmatica', title: 'Respiração Diafragmática Guiada', type: 'Exercício', duration: '10 min', description: 'Aprenda a técnica fundamental para ativação do core.' },
+        { day: 3, slug: 'ativacao-transverso', title: 'Ativação do Transverso Abdominal', type: 'Vídeo Aula', duration: '12 min', description: 'Técnicas para ativar o músculo mais profundo do abdômen.' },
+        { day: 4, slug: 'alongamentos-posturais', title: 'Alongamentos Posturais', type: 'Exercício', duration: '15 min', description: 'Sequência de alongamentos para melhorar a postura.' },
+        { day: 5, slug: 'plano-alimentar', title: 'Mini Plano Alimentar Anti-inflamatório', type: 'Material', duration: '5 min', description: 'Guia prático com alimentos que auxiliam na recuperação.' },
+        { day: 6, slug: 'pratica-integrada-1', title: 'Prática Integrada - Semana 1', type: 'Exercício', duration: '20 min', description: 'Combinação de todos os exercícios aprendidos.' },
+        { day: 7, slug: 'autoavaliacao-1', title: 'Autoavaliação e Planejamento', type: 'Avaliação', duration: '10 min', description: 'Reflita sobre seu progresso e planeje a próxima semana.' },
     ]
   },
   {
@@ -68,13 +70,13 @@ export const modules: Module[] = [
         'Sentir o abdômen mais firme e a postura mais alinhada.',
     ],
      schedule: [
-        { day: 8, title: 'Progressão Segura de Exercícios', type: 'Vídeo Aula', duration: '18 min', description: 'Como evoluir nos exercícios sem prejudicar a recuperação' },
-        { day: 9, title: 'Ponte Básica e Variações', type: 'Exercício', duration: '15 min', description: 'Fortalecimento dos glúteos e estabilização pélvica' },
-        { day: 10, title: 'Dead Bug - Técnica Perfeita', type: 'Vídeo Aula', duration: '14 min', description: 'Exercício fundamental para coordenação e estabilidade' },
-        { day: 11, title: 'Elevação de Quadril Controlada', type: 'Exercício', duration: '12 min', description: 'Fortalecimento específico para o core posterior' },
-        { day: 12, title: 'Ergonomia no Dia a Dia', type: 'Material', duration: '8 min', description: 'Como manter boa postura nas atividades cotidianas' },
-        { day: 13, title: 'Circuito de Fortalecimento', type: 'Exercício', duration: '25 min', description: 'Combinação dos exercícios da semana em sequência' },
-        { day: 14, title: 'Correção de Erros Comuns', type: 'Avaliação', duration: '15 min', description: 'Identifique e corrija os principais erros de execução' },
+        { day: 8, slug: 'progressao-segura', title: 'Progressão Segura de Exercícios', type: 'Vídeo Aula', duration: '18 min', description: 'Como evoluir nos exercícios sem prejudicar a recuperação' },
+        { day: 9, slug: 'ponte-basica', title: 'Ponte Básica e Variações', type: 'Exercício', duration: '15 min', description: 'Fortalecimento dos glúteos e estabilização pélvica' },
+        { day: 10, slug: 'dead-bug', title: 'Dead Bug - Técnica Perfeita', type: 'Vídeo Aula', duration: '14 min', description: 'Exercício fundamental para coordenação e estabilidade' },
+        { day: 11, slug: 'elevacao-quadril', title: 'Elevação de Quadril Controlada', type: 'Exercício', duration: '12 min', description: 'Fortalecimento específico para o core posterior' },
+        { day: 12, slug: 'ergonomia', title: 'Ergonomia no Dia a Dia', type: 'Material', duration: '8 min', description: 'Como manter boa postura nas atividades cotidianas' },
+        { day: 13, slug: 'circuito-fortalecimento', title: 'Circuito de Fortalecimento', type: 'Exercício', duration: '25 min', description: 'Combinação dos exercícios da semana em sequência' },
+        { day: 14, slug: 'correcao-erros', title: 'Correção de Erros Comuns', type: 'Avaliação', duration: '15 min', description: 'Identifique e corrija os principais erros de execução' },
     ]
   },
   {
@@ -97,13 +99,13 @@ export const modules: Module[] = [
         'Sentir-se confiante e no controle do seu corpo.',
     ],
     schedule: [
-        { day: 15, title: 'Exercícios de Estabilidade Avançados', type: 'Vídeo Aula', duration: '20 min', description: 'Desafios progressivos para consolidar a recuperação' },
-        { day: 16, title: 'Prancha e Variações Seguras', type: 'Exercício', duration: '18 min', description: 'Fortalecimento isométrico adaptado para diástase' },
-        { day: 17, title: 'Construindo Resistência Muscular', type: 'Vídeo Aula', duration: '16 min', description: 'Estratégias para aumentar a resistência sem sobrecarga' },
-        { day: 18, title: 'Rotina Completa de Manutenção', type: 'Exercício', duration: '30 min', description: 'Sequência de exercícios para continuar após o programa' },
-        { day: 19, title: 'Estratégias de Longo Prazo', type: 'Material', duration: '12 min', description: 'Como manter os resultados e continuar progredindo' },
-        { day: 20, title: 'Desafio Final - Teste de Progresso', type: 'Exercício', duration: '25 min', description: 'Avalie sua evolução com exercícios progressivos' },
-        { day: 21, title: 'Planejamento Futuro', type: 'Avaliação', duration: '15 min', description: 'Crie seu plano personalizado de manutenção' },
+        { day: 15, slug: 'estabilidade-avancados', title: 'Exercícios de Estabilidade Avançados', type: 'Vídeo Aula', duration: '20 min', description: 'Desafios progressivos para consolidar a recuperação' },
+        { day: 16, slug: 'prancha-segura', title: 'Prancha e Variações Seguras', type: 'Exercício', duration: '18 min', description: 'Fortalecimento isométrico adaptado para diástase' },
+        { day: 17, slug: 'resistencia-muscular', title: 'Construindo Resistência Muscular', type: 'Vídeo Aula', duration: '16 min', description: 'Estratégias para aumentar a resistência sem sobrecarga' },
+        { day: 18, slug: 'rotina-manutencao', title: 'Rotina Completa de Manutenção', type: 'Exercício', duration: '30 min', description: 'Sequência de exercícios para continuar após o programa' },
+        { day: 19, slug: 'estrategias-longo-prazo', title: 'Estratégias de Longo Prazo', type: 'Material', duration: '12 min', description: 'Como manter os resultados e continuar progredindo' },
+        { day: 20, slug: 'desafio-final', title: 'Desafio Final - Teste de Progresso', type: 'Exercício', duration: '25 min', description: 'Avalie sua evolução com exercícios progressivos' },
+        { day: 21, slug: 'planejamento-futuro', title: 'Planejamento Futuro', type: 'Avaliação', duration: '15 min', description: 'Crie seu plano personalizado de manutenção' },
     ]
   },
 ];

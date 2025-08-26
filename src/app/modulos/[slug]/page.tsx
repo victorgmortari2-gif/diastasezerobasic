@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, CheckCircle, Video, FileText, Activity, BookText, GraduationCap } from 'lucide-react';
+import { ArrowLeft, CheckCircle, Video, BookText, Activity, GraduationCap } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 export default function ModulePage({ params }: { params: { slug: string } }) {
@@ -57,7 +57,8 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
             <h2 className="font-headline text-2xl font-bold mb-6">Conteúdo Programático da Semana</h2>
             <div className="space-y-4">
                 {module.schedule.map(item => (
-                    <Card key={item.day} className="transition-shadow duration-300 hover:shadow-lg bg-white">
+                  <Link key={item.day} href={`/modulos/${module.slug}/${item.slug}`} className="block group">
+                    <Card className="transition-shadow duration-300 hover:shadow-lg bg-white">
                         <CardContent className="p-4 md:p-6 flex items-start gap-4 md:gap-6">
                            <div className="flex flex-col items-center">
                                 <div className="flex items-center justify-center h-10 w-10 rounded-full bg-primary/10 text-primary font-bold text-lg">
@@ -72,11 +73,12 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
                                     </div>
                                     <Badge variant="secondary" className="mt-2 sm:mt-0">{item.duration}</Badge>
                                 </div>
-                                <h4 className="font-headline text-lg md:text-xl font-semibold text-foreground mb-1">{item.title}</h4>
+                                <h4 className="font-headline text-lg md:text-xl font-semibold text-foreground mb-1 group-hover:text-primary transition-colors">{item.title}</h4>
                                 <p className="text-muted-foreground text-sm md:text-base">{item.description}</p>
                            </div>
                         </CardContent>
                     </Card>
+                  </Link>
                 ))}
             </div>
           </div>
