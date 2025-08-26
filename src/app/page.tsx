@@ -76,7 +76,7 @@ export default function Home() {
         </section>
 
         {/* Modules Section */}
-        <section id="modulos" className="py-12 md:py-24 bg-primary/5">
+        <section id="modulos" className="py-12 md:py-24 bg-beige">
             <div className="container px-4 md:px-6">
                 <div className="text-center">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold">
@@ -87,7 +87,7 @@ export default function Home() {
                     </p>
                 </div>
                 <div className="mt-12 grid gap-8 md:grid-cols-3">
-                    <Card className="flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                    <Card className="flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group bg-white">
                         <CardHeader>
                             <CardTitle className="font-headline flex items-center gap-3">
                                 <span className="bg-primary text-primary-foreground rounded-full h-8 w-8 flex items-center justify-center font-bold text-sm">1</span>
@@ -105,10 +105,13 @@ export default function Home() {
                             </ul>
                         </CardContent>
                         <div className="p-6 pt-0 mt-4">
-                           <Button variant="outline" className="w-full transition-colors hover:bg-primary hover:text-primary-foreground">Acessar módulo</Button>
+                            <a href="#" className="font-bold text-primary flex items-center gap-2">
+                                Acessar módulo
+                                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-2" />
+                            </a>
                         </div>
                     </Card>
-                    <Card className="flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                    <Card className="flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group bg-white">
                         <CardHeader>
                             <CardTitle className="font-headline flex items-center gap-3">
                                 <span className="bg-primary text-primary-foreground rounded-full h-8 w-8 flex items-center justify-center font-bold text-sm">2</span>
@@ -125,10 +128,13 @@ export default function Home() {
                             </ul>
                         </CardContent>
                         <div className="p-6 pt-0 mt-4">
-                           <Button variant="outline" className="w-full transition-colors hover:bg-primary hover:text-primary-foreground">Acessar módulo</Button>
+                           <a href="#" className="font-bold text-primary flex items-center gap-2">
+                                Acessar módulo
+                                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-2" />
+                            </a>
                         </div>
                     </Card>
-                    <Card className="flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+                    <Card className="flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group bg-white">
                         <CardHeader>
                             <CardTitle className="font-headline flex items-center gap-3">
                                  <span className="bg-primary text-primary-foreground rounded-full h-8 w-8 flex items-center justify-center font-bold text-sm">3</span>
@@ -145,7 +151,10 @@ export default function Home() {
                             </ul>
                         </CardContent>
                         <div className="p-6 pt-0 mt-4">
-                            <Button variant="outline" className="w-full transition-colors hover:bg-primary hover:text-primary-foreground">Acessar módulo</Button>
+                            <a href="#" className="font-bold text-primary flex items-center gap-2">
+                                Acessar módulo
+                                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-2" />
+                            </a>
                         </div>
                     </Card>
                 </div>
