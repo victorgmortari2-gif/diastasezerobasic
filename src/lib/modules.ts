@@ -97,13 +97,13 @@ export const modules: Module[] = [
         'Sentir-se confiante e no controle do seu corpo.',
     ],
     schedule: [
-        { day: 15, title: 'A Importância da Estabilidade', type: 'Vídeo Aula', duration: '7 min', description: 'Entenda como um core estável protege sua coluna e melhora a aparência abdominal.' },
-        { day: 16, title: 'Treino de Estabilidade - Dia 1', type: 'Exercício', duration: '15 min', description: 'Primeira sequência de exercícios focados em isometria e controle.' },
-        { day: 17, title: 'Treino de Estabilidade - Dia 2', type: 'Exercício', duration: '15 min', description: 'Progressão dos exercícios, desafiando seu equilíbrio.' },
-        { day: 18, title: 'O Ciclo do Sono e a Recuperação', type: 'Material', duration: '5 min', description: 'Dicas práticas para melhorar a qualidade do seu sono e acelerar os resultados.' },
-        { day: 19, title: 'Treino de Estabilidade - Dia 3', type: 'Exercício', duration: '15 min', description: 'Sequência avançada para consolidar a força e o controle do seu core.' },
-        { day: 20, title: 'Aula Final: Como Manter Seus Resultados', type: 'Vídeo Aula', duration: '18 min', description: 'Estratégias para incorporar os exercícios na sua rotina e evitar a regressão.' },
-        { day: 21, title: 'Parabéns e Próximos Passos', type: 'Avaliação', duration: '5 min', description: 'Celebre sua conquista e receba orientações para o futuro.' },
+        { day: 15, title: 'Exercícios de Estabilidade Avançados', type: 'Vídeo Aula', duration: '20 min', description: 'Desafios progressivos para consolidar a recuperação' },
+        { day: 16, title: 'Prancha e Variações Seguras', type: 'Exercício', duration: '18 min', description: 'Fortalecimento isométrico adaptado para diástase' },
+        { day: 17, title: 'Construindo Resistência Muscular', type: 'Vídeo Aula', duration: '16 min', description: 'Estratégias para aumentar a resistência sem sobrecarga' },
+        { day: 18, title: 'Rotina Completa de Manutenção', type: 'Exercício', duration: '30 min', description: 'Sequência de exercícios para continuar após o programa' },
+        { day: 19, title: 'Estratégias de Longo Prazo', type: 'Material', duration: '12 min', description: 'Como manter os resultados e continuar progredindo' },
+        { day: 20, title: 'Desafio Final - Teste de Progresso', type: 'Exercício', duration: '25 min', description: 'Avalie sua evolução com exercícios progressivos' },
+        { day: 21, title: 'Planejamento Futuro', type: 'Avaliação', duration: '15 min', description: 'Crie seu plano personalizado de manutenção' },
     ]
   },
 ];
