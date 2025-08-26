@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
+import Image from 'next/image';
 
 export default function LessonPage({ params }: { params: { slug: string; aula: string } }) {
   const module = modules.find((m) => m.slug === params.slug);
@@ -23,6 +24,15 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
               Voltar ao Módulo
             </Link>
           </Button>
+          <Link href="/">
+            <Image 
+                src="https://i.imgur.com/VJtWx2S.png" 
+                alt="Diástase Zero Logo" 
+                width={50} 
+                height={50}
+                className='mx-auto'
+            />
+          </Link>
           <div className="font-headline text-lg font-bold text-primary">Diástase Zero</div>
         </div>
       </header>

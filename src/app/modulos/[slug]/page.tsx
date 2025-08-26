@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { ArrowLeft, CheckCircle, Video, BookText, Activity, GraduationCap } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import Image from 'next/image';
 
 export default function ModulePage({ params }: { params: { slug: string } }) {
   const module = modules.find((m) => m.slug === params.slug);
@@ -35,6 +36,15 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
               Voltar aos Módulos
             </Link>
           </Button>
+           <Link href="/">
+            <Image 
+                src="https://i.imgur.com/VJtWx2S.png" 
+                alt="Diástase Zero Logo" 
+                width={50} 
+                height={50}
+                className='mx-auto'
+            />
+          </Link>
           <div className="font-headline text-lg font-bold text-primary">Diástase Zero</div>
         </div>
       </header>
