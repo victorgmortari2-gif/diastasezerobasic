@@ -76,7 +76,7 @@ export default function Home() {
         </section>
 
         {/* Modules Section */}
-        <section id="modulos" className="py-12 md:py-24 bg-primary/5">
+        <section id="modulos" className="py-12 md:py-24" style={{ backgroundColor: '#F9F5F2' }}>
             <div className="container px-4 md:px-6">
                 <div className="text-center">
                     <h2 className="font-headline text-3xl md:text-4xl font-bold">
@@ -286,5 +286,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
