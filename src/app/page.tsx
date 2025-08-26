@@ -32,12 +32,12 @@ export default function Home() {
                 </Button>
                 <div className="relative mt-8 max-w-4xl mx-auto">
                     <Image
-                        src="https://picsum.photos/1200/600"
-                        alt="Mulher praticando exercícios de recuperação abdominal"
-                        width={1200}
-                        height={600}
+                        src="https://i.imgur.com/VJtWx2S.png"
+                        alt="Visão geral do programa Diástase Zero"
+                        width={1152}
+                        height={675}
                         className="rounded-xl shadow-2xl"
-                        data-ai-hint="woman abs recovery"
+                        data-ai-hint="program overview"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-xl"></div>
                     <div className="absolute bottom-4 left-4 right-4 text-left p-4 bg-black/50 backdrop-blur-sm rounded-lg">
