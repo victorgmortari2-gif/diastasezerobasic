@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle, Award, BookOpen, Gift, Zap, Users, Lock, Clock, ArrowRight, Star, Heart, TrendingUp, Monitor, Zap as ZapIcon, CircleCheckBig } from "lucide-react";
+import { CheckCircle, Award, BookOpen, Gift, Zap, Users, Lock, Clock, ArrowRight, Star, Heart, TrendingUp, Monitor, Zap as ZapIcon, CircleCheckBig, HeartPulse, Dumbbell, Anchor } from "lucide-react";
 
 export default function Home() {
   return (
@@ -90,7 +90,7 @@ export default function Home() {
                     <Card className="flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group bg-white">
                         <CardHeader>
                             <CardTitle className="font-headline flex items-center gap-3">
-                                <span className="bg-primary text-primary-foreground rounded-full h-8 w-8 flex items-center justify-center font-bold text-sm">1</span>
+                                <HeartPulse className="h-8 w-8 text-primary" />
                                 Módulo 1 – Reconexão
                             </CardTitle>
                             <CardDescription>Dias 1 a 7</CardDescription>
@@ -114,7 +114,7 @@ export default function Home() {
                     <Card className="flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group bg-white">
                         <CardHeader>
                             <CardTitle className="font-headline flex items-center gap-3">
-                                <span className="bg-primary text-primary-foreground rounded-full h-8 w-8 flex items-center justify-center font-bold text-sm">2</span>
+                                <Dumbbell className="h-8 w-8 text-primary" />
                                 Módulo 2 – Fortalecimento
                             </CardTitle>
                              <CardDescription>Dias 8 a 14</CardDescription>
@@ -137,7 +137,7 @@ export default function Home() {
                     <Card className="flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 group bg-white">
                         <CardHeader>
                             <CardTitle className="font-headline flex items-center gap-3">
-                                 <span className="bg-primary text-primary-foreground rounded-full h-8 w-8 flex items-center justify-center font-bold text-sm">3</span>
+                                <Anchor className="h-8 w-8 text-primary" />
                                 Módulo 3 – Estabilidade
                             </CardTitle>
                             <CardDescription>Dias 15 a 21</CardDescription>
