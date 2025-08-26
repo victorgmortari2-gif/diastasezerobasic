@@ -14,7 +14,7 @@ export default function Home() {
             <div className="container px-4 md:px-6">
                 <div className="flex justify-center mb-6">
                     <Image 
-                        src="https://storage.googleapis.com/stabl-media/diastase-zero-logo-150x150.png" 
+                        src="https://i.imgur.com/VJtWx2S.png" 
                         alt="Diástase Zero Logo" 
                         width={150} 
                         height={150}
@@ -256,3 +256,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
