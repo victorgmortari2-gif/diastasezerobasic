@@ -25,7 +25,7 @@ export default function Home() {
                 <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
                     Transforme sua barriga e recupere sua autoestima com exercícios simples, rápidos e eficientes.
                 </p>
-                <Button size="lg" className="mt-6 font-bold transition-transform duration-300 hover:scale-105" asChild>
+                <Button size="lg" className="mt-6 font-bold text-lg p-8 transition-transform duration-300 hover:scale-105" asChild>
                     <a href="#modulos">ACESSAR MÓDULOS <ArrowRight className="ml-2 h-5 w-5" /></a>
                 </Button>
                 <div className="relative mt-8 max-w-4xl mx-auto">
