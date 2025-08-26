@@ -68,13 +68,13 @@ export const modules: Module[] = [
         'Sentir o abdômen mais firme e a postura mais alinhada.',
     ],
      schedule: [
-        { day: 8, title: 'Introdução aos Exercícios de Força', type: 'Vídeo Aula', duration: '8 min', description: 'Aprenda a forma correta dos novos movimentos.' },
-        { day: 9, title: 'Prática: Ponte e Variações', type: 'Exercício', duration: '10 min', description: 'Fortaleça o core e os glúteos com segurança.' },
-        { day: 10, title: 'Prática: Dead Bug e Controle', type: 'Exercício', duration: '10 min', description: 'Aprimore a estabilidade abdominal sem forçar a diástase.' },
-        { day: 11, title: 'Ergonomia para Mães', type: 'Vídeo Aula', duration: '12 min', description: 'Dicas de postura para o dia a dia, ao pegar o bebê e amamentar.' },
-        { day: 12, title: 'Alimentos que Curam', type: 'Material', duration: '7 min', description: 'Lista de alimentos que ajudam na produção de colágeno e cicatrização.' },
-        { day: 13, title: 'Aula Especial: Erros Comuns', type: 'Vídeo Aula', duration: '15 min', description: 'Identifique e corrija os erros que podem piorar a diástase.' },
-        { day: 14, title: 'Prática Completa da Semana 2', type: 'Exercício', duration: '15 min', description: 'Integre todos os exercícios de fortalecimento em uma rotina fluida.' },
+        { day: 8, title: 'Progressão Segura de Exercícios', type: 'Vídeo Aula', duration: '18 min', description: 'Como evoluir nos exercícios sem prejudicar a recuperação' },
+        { day: 9, title: 'Ponte Básica e Variações', type: 'Exercício', duration: '15 min', description: 'Fortalecimento dos glúteos e estabilização pélvica' },
+        { day: 10, title: 'Dead Bug - Técnica Perfeita', type: 'Vídeo Aula', duration: '14 min', description: 'Exercício fundamental para coordenação e estabilidade' },
+        { day: 11, title: 'Elevação de Quadril Controlada', type: 'Exercício', duration: '12 min', description: 'Fortalecimento específico para o core posterior' },
+        { day: 12, title: 'Ergonomia no Dia a Dia', type: 'Material', duration: '8 min', description: 'Como manter boa postura nas atividades cotidianas' },
+        { day: 13, title: 'Circuito de Fortalecimento', type: 'Exercício', duration: '25 min', description: 'Combinação dos exercícios da semana em sequência' },
+        { day: 14, title: 'Correção de Erros Comuns', type: 'Avaliação', duration: '15 min', description: 'Identifique e corrija os principais erros de execução' },
     ]
   },
   {
