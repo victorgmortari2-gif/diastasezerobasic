@@ -42,7 +42,7 @@ export const modules: Module[] = [
     ],
     schedule: [
         { day: 1, slug: 'introducao-diastase', title: 'Introdução à Diástase Abdominal', type: 'Vídeo Aula', duration: '15 min', description: 'Entenda o que é a diástase, suas causas e como ela afeta seu corpo.', videoUrl: 'https://www.youtube.com/embed/rgfSmmOyJWU' },
-        { day: 2, slug: 'respiracao-diafragmatica', title: 'Respiração Diafragmática Guiada', type: 'Exercício', duration: '10 min', description: 'Aprenda a técnica fundamental para ativação do core.' },
+        { day: 2, slug: 'respiracao-diafragmatica', title: 'Respiração Diafragmática Guiada', type: 'Exercício', duration: '10 min', description: 'Aprenda a técnica fundamental para ativação do core.', videoUrl: 'https://www.youtube.com/embed/71rJRIjbdEw' },
         { day: 3, slug: 'ativacao-transverso', title: 'Ativação do Transverso Abdominal', type: 'Vídeo Aula', duration: '12 min', description: 'Técnicas para ativar o músculo mais profundo do abdômen.' },
         { day: 4, slug: 'alongamentos-posturais', title: 'Alongamentos Posturais', type: 'Exercício', duration: '15 min', description: 'Sequência de alongamentos para melhorar a postura.' },
         { day: 5, slug: 'plano-alimentar', title: 'Mini Plano Alimentar Anti-inflamatório', type: 'Material', duration: '5 min', description: 'Guia prático com alimentos que auxiliam na recuperação.' },
