@@ -30,23 +30,6 @@ export default function Home() {
                 <Button size="lg" className="mt-6 font-bold text-lg p-8 transition-transform duration-300 hover:scale-105" asChild>
                     <Link href="#modulos">ACESSAR MÓDULOS <ArrowRight className="ml-2 h-5 w-5" /></Link>
                 </Button>
-                <div className="relative mt-8 max-w-4xl mx-auto">
-                    <Image
-                        src="https://i.imgur.com/VJtWx2S.png"
-                        alt="Visão geral do programa Diástase Zero"
-                        width={1152}
-                        height={675}
-                        className="rounded-xl shadow-2xl"
-                        data-ai-hint="program overview"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-xl"></div>
-                    <div className="absolute bottom-4 left-4 right-4 text-left p-4 bg-black/50 backdrop-blur-sm rounded-lg">
-                        <p className="font-bold text-white text-lg">
-                            <span className="bg-primary text-primary-foreground rounded-full px-3 py-1 text-sm mr-2">21</span>
-                            Dias de transformação para um abdômen firme e saudável.
-                        </p>
-                    </div>
-                </div>
             </div>
         </section>
         
@@ -256,5 +239,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
