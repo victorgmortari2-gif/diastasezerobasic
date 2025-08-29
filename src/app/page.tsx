@@ -16,13 +16,13 @@ export default function Home() {
                     <Image 
                         src="https://i.imgur.com/VJtWx2S.png" 
                         alt="Diástase Zero Logo" 
-                        width={150} 
-                        height={150}
-                        data-ai-hint="logo diastasis"
+                        width={90} 
+                        height={90}
+                        className='mx-auto'
                     />
                 </div>
                 <h1 className="font-headline text-3xl md:text-5xl font-bold text-foreground">
-                    Bem-vinda ao Desafio Básico do <span className="text-primary">Diástase Zero</span>
+                    Bem-vinda ao Desafio <span className="text-blue-600">Básico</span> do <span className="text-primary">Diástase Zero</span>
                 </h1>
                 <p className="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
                     Transforme sua barriga e recupere sua autoestima com exercícios simples, rápidos e eficientes.
