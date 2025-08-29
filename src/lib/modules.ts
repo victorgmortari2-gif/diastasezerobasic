@@ -72,7 +72,7 @@ export const modules: Module[] = [
      schedule: [
         { day: 8, slug: 'progressao-segura', title: 'Progressão Segura de Exercícios', type: 'Vídeo Aula', duration: '18 min', description: 'Como evoluir nos exercícios sem prejudicar a recuperação' },
         { day: 9, slug: 'ponte-basica', title: 'Ponte Básica e Variações', type: 'Exercício', duration: '15 min', description: 'Fortalecimento dos glúteos e estabilização pélvica', videoUrl: 'https://www.youtube.com/embed/DWY10gV95NY' },
-        { day: 10, slug: 'dead-bug', title: 'Dead Bug - Técnica Perfeita', type: 'Vídeo Aula', duration: '14 min', description: 'Exercício fundamental para coordenação e estabilidade' },
+        { day: 10, slug: 'dead-bug', title: 'Dead Bug - Técnica Perfeita', type: 'Vídeo Aula', duration: '14 min', description: 'Exercício fundamental para coordenação e estabilidade', videoUrl: 'https://www.youtube.com/embed/uQfzuKBMJeE' },
         { day: 11, slug: 'elevacao-quadril', title: 'Elevação de Quadril Controlada', type: 'Exercício', duration: '12 min', description: 'Fortalecimento específico para o core posterior' },
         { day: 12, slug: 'ergonomia', title: 'Ergonomia no Dia a Dia', type: 'Material', duration: '8 min', description: 'Como manter boa postura nas atividades cotidianas' },
         { day: 13, slug: 'circuito-fortalecimento', title: 'Circuito de Fortalecimento', type: 'Exercício', duration: '25 min', description: 'Combinação dos exercícios da semana em sequência' },
