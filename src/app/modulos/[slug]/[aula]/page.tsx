@@ -2,7 +2,7 @@ import { modules } from '@/lib/modules';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, Check, AlertTriangle, ArrowRight, Target, BrainCircuit, Heart, ShieldCheck, Siren, TrendingUp, Goal, Milestone } from 'lucide-react';
+import { ArrowLeft, Check, AlertTriangle, ArrowRight, Target, BrainCircuit, Heart, ShieldCheck, Siren, TrendingUp, Goal, Milestone, FileWarning, Lightbulb } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
@@ -11,6 +11,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 export default function LessonPage({ params }: { params: { slug: string; aula: string } }) {
   const module = modules.find((m) => m.slug === params.slug);
   const lesson = module?.schedule.find((l) => l.slug === params.aula);
+  const nextModule = modules.find(m => m.slug === 'estabilidade');
 
   if (!module || !lesson) {
     notFound();
@@ -136,7 +137,6 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
   const SelfAssessmentContent = () => {
     if (!lesson.content) return null;
     const assessment = lesson.content;
-    const nextModule = modules.find(m => m.slug === 'fortalecimento');
 
     return (
       <div className="space-y-12">
@@ -296,6 +296,67 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
       </div>
     );
   };
+  
+  const CommonErrorsContent = () => {
+    if (!lesson.content) return null;
+    const content = lesson.content;
+
+    return (
+      <div className="space-y-12">
+        {/* Introduction */}
+        <section>
+          <h2 className="font-headline text-3xl font-bold text-primary">{content.titulo_aula}</h2>
+          <p className="mt-2 text-muted-foreground max-w-3xl text-lg">{content.texto_introducao}</p>
+        </section>
+
+        {/* Common Errors */}
+        <section>
+          <h3 className="font-headline text-2xl font-bold mb-6">{content.titulo_erros_comuns}</h3>
+          <div className="space-y-6">
+            {content.lista_erros.map((erro: any, index: number) => (
+              <Card key={index} className="overflow-hidden">
+                <CardHeader className="bg-red-50 p-4">
+                  <CardTitle className="font-headline text-lg text-red-800 flex items-center gap-3">
+                    <FileWarning className="h-6 w-6" />
+                    {erro.titulo_erro}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="p-4 space-y-3">
+                  <p className="text-muted-foreground">{erro.descricao_erro}</p>
+                  <div className="p-3 bg-green-50 rounded-md border border-green-200 text-green-800 flex items-start gap-3">
+                    <Lightbulb className="h-5 w-5 mt-1 flex-shrink-0"/>
+                    <div>
+                        <h4 className="font-bold">Correção:</h4>
+                        <p>{erro.correcao}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Conclusion */}
+        <section className="text-center mt-8">
+          <h3 className="font-headline text-xl font-bold">{content.titulo_conclusao}</h3>
+          <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">{content.texto_conclusao}</p>
+        </section>
+        
+        {/* CTA */}
+        <section className="text-center bg-primary/10 p-8 rounded-xl">
+          <h2 className="font-headline text-2xl font-bold">{content.titulo_cta}</h2>
+          <p className="mt-2 text-muted-foreground max-w-3xl mx-auto">{content.texto_cta}</p>
+          {nextModule && (
+            <Button size="lg" className="mt-6 font-bold text-lg animate-pulse-scale" asChild>
+              <Link href={`/modulos/${nextModule.slug}`}>
+                 Ir para o Módulo 3 <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          )}
+        </section>
+      </div>
+    );
+  };
 
 
   return (
@@ -346,7 +407,8 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
           ) : lesson.content ? (
               lesson.content.titulo_cardapio ? <FoodPlanContent /> 
             : lesson.content.titulo_autoavaliacao ? <SelfAssessmentContent /> 
-            : lesson.content.titulo_aula ? <SafeProgressionContent />
+            : lesson.content.titulo_aula && lesson.content.titulo_pilares ? <SafeProgressionContent />
+            : lesson.content.titulo_aula && lesson.content.titulo_erros_comuns ? <CommonErrorsContent />
             : (
               <Card>
                 <CardContent className="p-8 text-center">

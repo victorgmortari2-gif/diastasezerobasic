@@ -2,6 +2,7 @@ import { HeartPulse, Dumbbell, Anchor, LucideIcon } from 'lucide-react';
 import { foodPlan } from './food-plan';
 import { selfAssessment } from './self-assessment';
 import { safeProgression } from './safe-progression';
+import { commonErrors } from './common-errors';
 
 export interface Module {
   slug: string;
@@ -80,7 +81,7 @@ export const modules: Module[] = [
         { day: 11, slug: 'elevacao-quadril', title: 'Elevação de Quadril Controlada', type: 'Exercício', duration: '2 min', description: 'Fortalecimento específico para o core posterior', videoUrl: 'https://www.youtube.com/embed/p3Nf4e3ym7w' },
         { day: 12, slug: 'ergonomia', title: 'Ergonomia no Dia a Dia', type: 'Vídeo Aula', duration: '10 min', description: 'Como manter boa postura nas atividades cotidianas', videoUrl: 'https://www.youtube.com/embed/BNnCT6JcvD8' },
         { day: 13, slug: 'circuito-fortalecimento', title: 'Circuito de Fortalecimento', type: 'Exercício', duration: '25 min', description: 'Combinação dos exercícios da semana em sequência' },
-        { day: 14, slug: 'correcao-erros', title: 'Correção de Erros Comuns', type: 'Avaliação', duration: '15 min', description: 'Identifique e corrija os principais erros de execução' },
+        { day: 14, slug: 'correcao-erros', title: 'Correção de Erros Comuns', type: 'Avaliação', duration: '15 min', description: 'Identifique e corrija os principais erros de execução', content: commonErrors },
     ]
   },
   {
