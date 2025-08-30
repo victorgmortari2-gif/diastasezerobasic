@@ -49,7 +49,7 @@ export const modules: Module[] = [
         { day: 3, slug: 'ativacao-transverso', title: 'Ativação do Transverso Abdominal', type: 'Vídeo Aula', duration: '17 min', description: 'Técnicas para ativar o músculo mais profundo do abdômen.', videoUrl: 'https://www.youtube.com/embed/emEoq-nfi3M' },
         { day: 4, slug: 'alongamentos-posturais', title: 'Alongamentos Posturais', type: 'Exercício', duration: '12 min', description: 'Sequência de alongamentos para melhorar a postura.', videoUrl: 'https://www.youtube.com/embed/hrZ_JTeEkyg' },
         { day: 5, slug: 'plano-alimentar', title: 'Mini Plano Alimentar Anti-inflamatório', type: 'Material', duration: '5 min', description: 'Guia prático com alimentos que auxiliam na recuperação.', content: foodPlan },
-        { day: 6, slug: 'pratica-integrada-1', title: 'Prática Integrada - Semana 1', type: 'Exercício', duration: '20 min', description: 'Combinação de todos os exercícios aprendidos.', videoUrl: 'https://www.youtube.com/embed/rF7d-tnuRe4' },
+        { day: 6, slug: 'pratica-integrada-1', title: 'Prática Integrada - Semana 1', type: 'Exercício', duration: '12 min', description: 'Combinação de todos os exercícios aprendidos.', videoUrl: 'https://www.youtube.com/embed/rF7d-tnuRe4' },
         { day: 7, slug: 'autoavaliacao-1', title: 'Autoavaliação e Planejamento', type: 'Avaliação', duration: '10 min', description: 'Reflita sobre seu progresso e planeje a próxima semana.', content: selfAssessment },
     ]
   },
