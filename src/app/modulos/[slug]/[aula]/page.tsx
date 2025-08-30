@@ -2,7 +2,7 @@ import { modules } from '@/lib/modules';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, Check, AlertTriangle, ArrowRight, Target, BrainCircuit, Heart, ShieldCheck, Siren, TrendingUp, Goal, Milestone, FileWarning, Lightbulb, Zap, Anchor as AnchorIcon, RefreshCw, Star, Shield, Clock } from 'lucide-react';
+import { ArrowLeft, Check, AlertTriangle, ArrowRight, Target, BrainCircuit, Heart, ShieldCheck, Siren, TrendingUp, Goal, Milestone, FileWarning, Lightbulb, Zap, Anchor as AnchorIcon, RefreshCw, Star, Shield, Clock, BookCheck, ClipboardList, ThumbsUp, Crown, Sparkles } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
@@ -404,6 +404,85 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
       </div>
     );
   };
+  
+    const PlanningFutureContent = () => {
+    if (!lesson.content) return null;
+    const content = lesson.content;
+
+    return (
+      <div className="space-y-12">
+        {/* Introduction */}
+        <section className="text-center">
+          <Sparkles className="h-16 w-16 text-primary mx-auto mb-4" />
+          <h2 className="font-headline text-3xl font-bold text-primary">{content.titulo_aula}</h2>
+          <p className="mt-2 text-muted-foreground max-w-3xl mx-auto text-lg">{content.texto_introducao}</p>
+        </section>
+        
+        {/* Recap */}
+        <section>
+          <Card className='bg-slate-50'>
+            <CardHeader>
+                <CardTitle className="font-headline text-2xl flex items-center gap-3">
+                    <ThumbsUp className="h-8 w-8 text-primary" />
+                    {content.titulo_recapitulacao}
+                </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">{content.texto_recapitulacao}</p>
+            </CardContent>
+          </Card>
+        </section>
+        
+        {/* Maintenance Plan */}
+        <section>
+          <h2 className="font-headline text-2xl font-bold text-center mb-6">{content.titulo_plano_personalizado}</h2>
+          <div className="space-y-6">
+            {content.instrucoes_plano.map((step: any, index: number) => (
+              <Card key={index} className="flex items-start gap-4 p-4">
+                  <div className="flex-shrink-0 h-10 w-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg">{index + 1}</div>
+                  <div>
+                    <h3 className="font-headline font-bold text-lg">{step.titulo_passo}</h3>
+                    <p className="text-muted-foreground">{step.texto_passo}</p>
+                  </div>
+              </Card>
+            ))}
+          </div>
+        </section>
+        
+        {/* Premium CTA */}
+        <section className="text-center bg-gradient-to-br from-primary to-green-700 text-white p-8 rounded-xl shadow-2xl">
+          <Crown className="h-12 w-12 mx-auto mb-4 text-amber-300" />
+          <h2 className="font-headline text-3xl font-bold">{content.titulo_cta}</h2>
+          <p className="mt-4 text-lg opacity-90 max-w-3xl mx-auto">{content.texto_cta_parte1}</p>
+          <Card className="mt-8 bg-white/10 text-left p-6 rounded-lg">
+            <CardHeader className="p-0 mb-4">
+              <CardTitle className="text-xl font-bold text-amber-300">{content.titulo_beneficios}</CardTitle>
+            </CardHeader>
+            <CardContent className="p-0">
+               <ul className="space-y-3">
+                {content.lista_beneficios.map((benefit: string, index: number) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <Check className="h-5 w-5 text-amber-300 mt-1 flex-shrink-0" />
+                    <span>{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+          <p className="mt-6 text-lg opacity-90">{content.texto_cta_final}</p>
+           <Button size="lg" variant="secondary" className="mt-8 font-bold text-lg animate-pulse-scale bg-amber-400 text-black hover:bg-amber-500">
+                QUERO IR ALÉM <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+        </section>
+        
+        {/* Farewell */}
+        <section className="text-center mt-8">
+            <h3 className="font-headline text-2xl font-bold">{content.titulo_despedida}</h3>
+            <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">{content.texto_despedida}</p>
+        </section>
+      </div>
+    );
+  };
 
 
   return (
@@ -457,6 +536,7 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
             : lesson.content.titulo_pilares && lesson.content.lista_pilares[0].exemplo_pilar ? <SafeProgressionContent />
             : lesson.content.titulo_erros_comuns ? <CommonErrorsContent />
             : lesson.content.titulo_pilares && lesson.content.lista_pilares[0].pontos_chave ? <LongTermStrategiesContent />
+            : lesson.content.titulo_plano_personalizado ? <PlanningFutureContent />
             : (
               <Card>
                 <CardContent className="p-8 text-center">
@@ -501,5 +581,3 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
     </div>
   );
 }
-
-    

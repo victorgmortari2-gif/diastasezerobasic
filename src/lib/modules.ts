@@ -4,6 +4,7 @@ import { selfAssessment } from './self-assessment';
 import { safeProgression } from './safe-progression';
 import { commonErrors } from './common-errors';
 import { longTermStrategies } from './long-term-strategies';
+import { planningFuture } from './planning-future';
 
 export interface Module {
   slug: string;
@@ -111,9 +112,7 @@ export const modules: Module[] = [
         { day: 18, slug: 'rotina-manutencao', title: 'Rotina Completa de Manutenção', type: 'Exercício', duration: '30 min', description: 'Sequência de exercícios para continuar após o programa' },
         { day: 19, slug: 'estrategias-longo-prazo', title: 'Estratégias de Longo Prazo', type: 'Material', duration: '12 min', description: 'Como manter os resultados e continuar progredindo', content: longTermStrategies },
         { day: 20, slug: 'desafio-final', title: 'Desafio Final - Teste de Progresso', type: 'Exercício', duration: '25 min', description: 'Avalie sua evolução com exercícios progressivos' },
-        { day: 21, slug: 'planejamento-futuro', title: 'Planejamento Futuro', type: 'Avaliação', duration: '15 min', description: 'Crie seu plano personalizado de manutenção' },
+        { day: 21, slug: 'planejamento-futuro', title: 'Planejamento Futuro', type: 'Avaliação', duration: '15 min', description: 'Crie seu plano personalizado de manutenção', content: planningFuture },
     ]
   },
 ];
-
-    
