@@ -2,7 +2,7 @@ import { modules } from '@/lib/modules';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, Check, AlertTriangle } from 'lucide-react';
+import { ArrowLeft, Check, AlertTriangle, ArrowRight, Target, BrainCircuit, Heart } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
@@ -30,7 +30,7 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
 
         {/* Principles */}
         <section>
-          <Card className="bg-primary/10 border-primary/20">
+           <Card className="bg-primary/10 border-primary/20">
             <CardHeader>
               <CardTitle className="font-headline text-xl text-primary">{plan.titulo_principios}</CardTitle>
             </CardHeader>
@@ -132,6 +132,81 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
       </div>
     );
   };
+  
+  const SelfAssessmentContent = () => {
+    if (!lesson.content) return null;
+    const assessment = lesson.content;
+    const nextModule = modules.find(m => m.slug === 'fortalecimento');
+
+    return (
+      <div className="space-y-12">
+        {/* Introduction */}
+        <section className="text-center">
+          <Heart className="h-16 w-16 text-primary mx-auto mb-4 animate-pulse" />
+          <h2 className="font-headline text-3xl font-bold text-primary">{assessment.titulo_introducao}</h2>
+          <p className="mt-2 text-muted-foreground max-w-3xl mx-auto text-lg">{assessment.texto_introducao}</p>
+        </section>
+
+        {/* Self-Assessment Section */}
+        <section>
+          <Card>
+            <CardHeader>
+              <div className='flex items-center gap-3'>
+                <BrainCircuit className="h-8 w-8 text-primary" />
+                <CardTitle className="font-headline text-2xl">{assessment.titulo_autoavaliacao}</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-4">
+                {assessment.perguntas_reflexao.map((question: string, index: number) => (
+                  <li key={index} className="flex items-start gap-4 p-3 bg-slate-50 rounded-lg">
+                    <div className="flex-shrink-0 h-6 w-6 rounded-full bg-primary/20 text-primary flex items-center justify-center font-bold mt-1">?</div>
+                    <span className="text-muted-foreground">{question}</span>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        </section>
+        
+        {/* Planning Section */}
+        <section>
+          <Card>
+            <CardHeader>
+              <div className='flex items-center gap-3'>
+                <Target className="h-8 w-8 text-primary" />
+                <CardTitle className="font-headline text-2xl">{assessment.titulo_planejamento}</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground mb-4">{assessment.orientacoes_planejamento}</p>
+              <ul className="space-y-3">
+                {assessment.lista_planejamento.map((item: string, index: number) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <Check className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
+                    <span className="text-muted-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* CTA Section */}
+        <section className="text-center bg-primary/10 p-8 rounded-xl">
+          <h2 className="font-headline text-2xl font-bold">{assessment.titulo_cta}</h2>
+          <p className="mt-2 text-muted-foreground max-w-3xl mx-auto">{assessment.texto_cta}</p>
+          {nextModule && (
+            <Button size="lg" className="mt-6 font-bold text-lg animate-pulse-scale" asChild>
+              <Link href={`/modulos/${nextModule.slug}`}>
+                {assessment.texto_botao_cta} <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          )}
+        </section>
+      </div>
+    );
+  };
 
 
   return (
@@ -180,7 +255,7 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
               </CardContent>
             </Card>
           ) : lesson.content ? (
-            <FoodPlanContent />
+            lesson.content.titulo_cardapio ? <FoodPlanContent /> : <SelfAssessmentContent />
           ) : (
             <Card>
               <CardContent className="p-8 text-center">
