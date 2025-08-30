@@ -25,10 +25,11 @@ export const planningFuture = {
   texto_cta_parte1: "Você tem todas as ferramentas para continuar por conta própria. Mas se você quer levar seus resultados a um novo nível, ter novos desafios, e se aprofundar ainda mais, preparei algo especial para você.",
   titulo_beneficios: "Desbloqueie o Plano Premium e Ganhe Bônus Exclusivos:",
   lista_beneficios: [
-    "Acesso ao Módulo de Exercícios Avançados: Novos desafios e variações de prancha, agachamentos e rotinas para uma força ainda maior.",
-    "Biblioteca de Aulas de Bônus: Acesso a aulas de alongamento, yoga para o core e meditações guiadas.",
-    "Sessões de Perguntas e Respostas Mensais: Participe de sessões ao vivo para tirar suas dúvidas diretamente comigo.",
-    "Comunidade Exclusiva: Conecte-se com outras mulheres na mesma jornada para apoio e motivação."
+    "Diagnóstico e Respiração Avançada: Autoteste, hipopressiva, ativação do core profundo e cardápio detox.",
+    "Treino Intensivo e Estabilidade: Progressão, workshop \"Zere sua diástase\" e suplementação.",
+    "Remodelagem Corporal: Protocolo avançado, mentoria e plano de 60 dias pós-desafio.",
+    "Estética e Postura Feminina: Exercícios para afinar cintura e alinhar postura.",
+    "Vida Real, Corpo Forte: Guia de alimentação para mães e rotina de 20 minutos."
   ],
   texto_cta_final: "Você já provou que é capaz. Agora, continue sua evolução com o suporte e os recursos que você merece.",
 

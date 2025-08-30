@@ -2,7 +2,7 @@ import { modules } from '@/lib/modules';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, Check, AlertTriangle, ArrowRight, Target, BrainCircuit, Heart, ShieldCheck, Siren, TrendingUp, Goal, Milestone, FileWarning, Lightbulb, Zap, Anchor as AnchorIcon, RefreshCw, Star, Shield, Clock, BookCheck, ClipboardList, ThumbsUp, Crown, Sparkles } from 'lucide-react';
+import { ArrowLeft, Check, AlertTriangle, ArrowRight, Target, BrainCircuit, Heart, ShieldCheck, Siren, TrendingUp, Goal, Milestone, FileWarning, Lightbulb, Zap, Anchor as AnchorIcon, RefreshCw, Star, Shield, Clock, BookCheck, ClipboardList, ThumbsUp, Crown, Sparkles, CircleCheckBig, Lock } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
@@ -449,34 +449,58 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
           </div>
         </section>
         
-        {/* Premium CTA */}
-        <section className="text-center bg-gradient-to-br from-primary to-green-700 text-white p-8 rounded-xl shadow-2xl">
-          <Crown className="h-12 w-12 mx-auto mb-4 text-amber-300" />
-          <h2 className="font-headline text-3xl font-bold">{content.titulo_cta}</h2>
-          <p className="mt-4 text-lg opacity-90 max-w-3xl mx-auto">{content.texto_cta_parte1}</p>
-          <Card className="mt-8 bg-white/10 text-left p-6 rounded-lg">
-            <CardHeader className="p-0 mb-4">
-              <CardTitle className="text-xl font-bold text-amber-300">{content.titulo_beneficios}</CardTitle>
-            </CardHeader>
-            <CardContent className="p-0">
-               <ul className="space-y-3">
-                {content.lista_beneficios.map((benefit: string, index: number) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <Check className="h-5 w-5 text-amber-300 mt-1 flex-shrink-0" />
-                    <span>{benefit}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-          <p className="mt-6 text-lg opacity-90">{content.texto_cta_final}</p>
-           <Button size="lg" variant="secondary" className="mt-8 font-bold text-lg animate-pulse-scale bg-amber-400 text-black hover:bg-amber-500">
-                QUERO IR ALÉM <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
+        {/* Premium Upgrade Section */}
+        <section className="mt-12">
+            <Card className="bg-primary text-primary-foreground border-2 border-accent shadow-xl">
+              <CardContent className="p-6 md:p-10">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  <div>
+                    <div className="inline-block bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-bold">
+                      POR APENAS R$ 12,90
+                    </div>
+                    <h3 className="font-headline text-3xl font-bold mt-4">Upgrade para o Desafio Premium</h3>
+                    <p className="mt-2 text-primary-foreground/90">
+                      Está gostando do Desafio Básico? Então aproveite esta oferta única e desbloqueie acesso imediato ao Desafio Premium com todos os módulos avançados e bônus exclusivos.
+                    </p>
+                    <div className="mt-8 text-center bg-background/20 p-6 rounded-lg">
+                       <p className="font-headline text-2xl font-bold text-accent" style={{ textShadow: '0 0 5px black' }}>🔥 OFERTA ESPECIAL</p>
+                       <p className="text-5xl font-bold mt-2">R$ 12,90</p>
+                       <p className="text-lg line-through opacity-80">de R$ 79,90</p>
+                       <p className="text-sm font-bold bg-accent text-accent-foreground rounded-full px-3 py-1 inline-block mt-2">85% OFF</p>
+                       <Button size="lg" className="mt-6 w-full font-bold text-lg bg-accent text-accent-foreground hover:bg-accent/90 animate-pulse-scale">
+                          👉 SIM, QUERO O PREMIUM!
+                       </Button>
+                       <p className="text-xs mt-4 flex items-center justify-center gap-4">
+                          <span className="flex items-center gap-1"><Clock className="h-3 w-3" /> Oferta por tempo limitado</span>
+                          <span className="flex items-center gap-1"><Lock className="h-3 w-3" /> Pagamento 100% seguro</span>
+                        </p>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-headline text-xl font-bold mb-4">O que você recebe no Premium:</h4>
+                    <ul className="space-y-3 text-sm">
+                      <li className="flex gap-3"><CircleCheckBig className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Diagnóstico e Respiração Avançada:</span> Autoteste, hipopressiva, ativação do core profundo e cardápio detox.</span></li>
+                      <li className="flex gap-3"><CircleCheckBig className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Treino Intensivo e Estabilidade:</span> Progressão, workshop "Zere sua diástase" e suplementação.</span></li>
+                      <li className="flex gap-3"><CircleCheckBig className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Remodelagem Corporal:</span> Protocolo avançado, mentoria e plano de 60 dias pós-desafio.</span></li>
+                      <li className="flex gap-3"><CircleCheckBig className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Estética e Postura Feminina:</span> Exercícios para afinar cintura e alinhar postura.</span></li>
+                      <li className="flex gap-3"><CircleCheckBig className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Vida Real, Corpo Forte:</span> Guia de alimentação para mães e rotina de 20 minutos.</span></li>
+                    </ul>
+                    <h4 className="font-headline text-xl font-bold mt-6 mb-4">Super Bônus do Premium</h4>
+                    <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                        <li className="flex items-center gap-2">✨ Todo conteúdo do Desafio Básico</li>
+                        <li className="flex items-center gap-2">📚 E-book "Diástase Zero o Ano Todo"</li>
+                        <li className="flex items-center gap-2">🧘 Meditação guiada</li>
+                        <li className="flex items-center gap-2">💬 Grupo EXCLUSIVO no WhatsApp</li>
+                        <li className="flex items-center gap-2">🏆 Certificado digital de conclusão</li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
         </section>
         
         {/* Farewell */}
-        <section className="text-center mt-8">
+        <section className="text-center mt-12">
             <h3 className="font-headline text-2xl font-bold">{content.titulo_despedida}</h3>
             <p className="text-muted-foreground mt-2 max-w-2xl mx-auto">{content.texto_despedida}</p>
         </section>
