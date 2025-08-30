@@ -30,16 +30,16 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
 
         {/* Principles */}
         <section>
-          <Card className="bg-blue-50 border-blue-200">
+          <Card className="bg-primary/10 border-primary/20">
             <CardHeader>
-              <CardTitle className="font-headline text-xl text-blue-800">{plan.titulo_principios}</CardTitle>
+              <CardTitle className="font-headline text-xl text-primary">{plan.titulo_principios}</CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="space-y-3">
                 {plan.lista_principios.map((principle: string, index: number) => (
                   <li key={index} className="flex items-start gap-3">
-                    <Check className="h-5 w-5 text-blue-500 mt-1 flex-shrink-0" />
-                    <span className="text-blue-700">{principle}</span>
+                    <Check className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
+                    <span className="text-primary/90">{principle}</span>
                   </li>
                 ))}
               </ul>
