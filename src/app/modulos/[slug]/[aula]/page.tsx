@@ -383,7 +383,7 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
       <main className="container px-4 md:px-6 py-12">
         <div className="max-w-4xl mx-auto">
           <section className="mb-8">
-            <h1 className="font-headline text-3xl md:text-4xl font-bold">{lesson.title}</h1>
+            <h1 className="font-headline text-3xl md:text-4xl font-bold text-primary">{lesson.title}</h1>
             <p className="mt-2 text-muted-foreground md:text-lg">{lesson.description}</p>
           </section>
 
