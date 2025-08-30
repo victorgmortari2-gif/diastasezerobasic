@@ -2,7 +2,7 @@ import { modules } from '@/lib/modules';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, Check, AlertTriangle, ArrowRight, Target, BrainCircuit, Heart, ShieldCheck, Siren, TrendingUp, Goal, Milestone, FileWarning, Lightbulb } from 'lucide-react';
+import { ArrowLeft, Check, AlertTriangle, ArrowRight, Target, BrainCircuit, Heart, ShieldCheck, Siren, TrendingUp, Goal, Milestone, FileWarning, Lightbulb, Zap, Anchor as AnchorIcon, RefreshCw, Star, Shield, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
@@ -355,6 +355,55 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
       </div>
     );
   };
+  
+  const LongTermStrategiesContent = () => {
+    if (!lesson.content) return null;
+    const content = lesson.content;
+    const icons = [<RefreshCw className="h-6 w-6 text-primary" />, <Star className="h-6 w-6 text-primary" />, <Zap className="h-6 w-6 text-primary" />, <Shield className="h-6 w-6 text-primary" />];
+
+    return (
+      <div className="space-y-12">
+        {/* Introduction */}
+        <section>
+          <p className="mt-2 text-muted-foreground max-w-3xl text-lg">{content.texto_introducao}</p>
+        </section>
+
+        {/* Pillars */}
+        <section>
+          <h2 className="font-headline text-2xl font-bold text-center mb-8">{content.titulo_pilares}</h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {content.lista_pilares.map((pilar: any, index: number) => (
+              <Card key={index} className="flex flex-col">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 font-headline text-xl">
+                    {icons[index]}
+                    {pilar.titulo_pilar}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow space-y-4">
+                  <p className="text-muted-foreground">{pilar.descricao_pilar}</p>
+                  <ul className="space-y-2">
+                    {pilar.pontos_chave.map((ponto: string, pIndex: number) => (
+                        <li key={pIndex} className="flex items-start gap-3">
+                            <Clock className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                            <span className="text-sm text-muted-foreground">{ponto}</span>
+                        </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Conclusion */}
+        <section className="text-center bg-primary/10 p-8 rounded-xl mt-8">
+          <h2 className="font-headline text-2xl font-bold">{content.titulo_conclusao}</h2>
+          <p className="mt-2 text-muted-foreground max-w-2xl mx-auto">{content.texto_conclusao}</p>
+        </section>
+      </div>
+    );
+  };
 
 
   return (
@@ -405,8 +454,9 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
           ) : lesson.content ? (
               lesson.content.titulo_cardapio ? <FoodPlanContent /> 
             : lesson.content.titulo_autoavaliacao ? <SelfAssessmentContent /> 
-            : lesson.content.titulo_pilares ? <SafeProgressionContent />
+            : lesson.content.titulo_pilares && lesson.content.lista_pilares[0].exemplo_pilar ? <SafeProgressionContent />
             : lesson.content.titulo_erros_comuns ? <CommonErrorsContent />
+            : lesson.content.titulo_pilares && lesson.content.lista_pilares[0].pontos_chave ? <LongTermStrategiesContent />
             : (
               <Card>
                 <CardContent className="p-8 text-center">
@@ -451,3 +501,5 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
     </div>
   );
 }
+
+    
