@@ -24,7 +24,7 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
       <div className="space-y-8">
         {/* Introduction */}
         <section>
-          <h2 className="font-headline text-2xl font-bold mb-2">{plan.titulo_introducao}</h2>
+          <h2 className="font-headline text-2xl font-bold mb-2 text-primary">{plan.titulo_introducao}</h2>
           <p className="text-muted-foreground">{plan.texto_introducao}</p>
         </section>
 
