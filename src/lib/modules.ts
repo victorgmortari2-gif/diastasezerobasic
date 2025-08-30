@@ -106,7 +106,7 @@ export const modules: Module[] = [
     schedule: [
         { day: 15, slug: 'estabilidade-avancados', title: 'Exercícios de Estabilidade Avançados', type: 'Vídeo Aula', duration: '20 min', description: 'Desafios progressivos para consolidar a recuperação' },
         { day: 16, slug: 'prancha-segura', title: 'Prancha e Variações Seguras', type: 'Exercício', duration: '18 min', description: 'Fortalecimento isométrico adaptado para diástase' },
-        { day: 17, slug: 'resistencia-muscular', title: 'Construindo Resistência Muscular', type: 'Vídeo Aula', duration: '16 min', description: 'Estratégias para aumentar a resistência sem sobrecarga', videoUrl: 'https://www.youtube.com/embed/hHYXLiSUsCg' },
+        { day: 17, slug: 'resistencia-muscular', title: 'Construindo Resistência Muscular', type: 'Vídeo Aula', duration: '12 min', description: 'Estratégias para aumentar a resistência sem sobrecarga', videoUrl: 'https://www.youtube.com/embed/hHYXLiSUsCg' },
         { day: 18, slug: 'rotina-manutencao', title: 'Rotina Completa de Manutenção', type: 'Exercício', duration: '30 min', description: 'Sequência de exercícios para continuar após o programa' },
         { day: 19, slug: 'estrategias-longo-prazo', title: 'Estratégias de Longo Prazo', type: 'Material', duration: '12 min', description: 'Como manter os resultados e continuar progredindo' },
         { day: 20, slug: 'desafio-final', title: 'Desafio Final - Teste de Progresso', type: 'Exercício', duration: '25 min', description: 'Avalie sua evolução com exercícios progressivos' },
