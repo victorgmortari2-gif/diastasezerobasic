@@ -216,7 +216,6 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
       <div className="space-y-12">
         {/* Introduction */}
         <section>
-          <h2 className="font-headline text-3xl font-bold text-primary">{content.titulo_aula}</h2>
           <p className="mt-2 text-muted-foreground max-w-3xl text-lg">{content.texto_introducao}</p>
         </section>
 
@@ -305,7 +304,6 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
       <div className="space-y-12">
         {/* Introduction */}
         <section>
-          <h2 className="font-headline text-3xl font-bold text-primary">{content.titulo_aula}</h2>
           <p className="mt-2 text-muted-foreground max-w-3xl text-lg">{content.texto_introducao}</p>
         </section>
 
