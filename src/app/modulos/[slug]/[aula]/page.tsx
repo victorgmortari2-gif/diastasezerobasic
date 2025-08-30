@@ -2,7 +2,7 @@ import { modules } from '@/lib/modules';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { ArrowLeft, Check, AlertTriangle, ArrowRight, Target, BrainCircuit, Heart } from 'lucide-react';
+import { ArrowLeft, Check, AlertTriangle, ArrowRight, Target, BrainCircuit, Heart, ShieldCheck, Siren, TrendingUp, Goal, Milestone } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
@@ -207,6 +207,95 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
       </div>
     );
   };
+  
+  const SafeProgressionContent = () => {
+    if (!lesson.content) return null;
+    const content = lesson.content;
+
+    return (
+      <div className="space-y-12">
+        {/* Introduction */}
+        <section>
+          <h2 className="font-headline text-3xl font-bold text-primary">{content.titulo_aula}</h2>
+          <p className="mt-2 text-muted-foreground max-w-3xl text-lg">{content.texto_introducao}</p>
+        </section>
+
+        {/* Golden Rule */}
+        <section>
+          <Card className="bg-amber-50 border-amber-200">
+            <CardHeader>
+                <CardTitle className="font-headline text-xl text-amber-800 flex items-center gap-3">
+                    <ShieldCheck className="h-6 w-6"/>
+                    {content.titulo_regra_de_ouro}
+                </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-amber-700">{content.texto_regra_de_ouro}</p>
+            </CardContent>
+          </Card>
+        </section>
+        
+        {/* Warning Signs */}
+        <section>
+          <Card className="bg-red-50 border-red-200">
+            <CardHeader>
+                <CardTitle className="font-headline text-xl text-red-800 flex items-center gap-3">
+                    <Siren className="h-6 w-6"/>
+                    {content.titulo_sinais_alerta}
+                </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ul className="space-y-4">
+                {content.lista_sinais.map((item: any, index: number) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <AlertTriangle className="h-5 w-5 text-red-500 mt-1 flex-shrink-0" />
+                    <div>
+                        <h4 className="font-bold text-red-700">{item.sinal}</h4>
+                        <p className="text-red-700/90">{item.descricao}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* 3 Pillars */}
+        <section>
+          <h2 className="font-headline text-2xl font-bold text-center mb-6">{content.titulo_pilares}</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {content.lista_pilares.map((pilar: any) => (
+              <Card key={pilar.pilar_numero} className="flex flex-col">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-3 font-headline text-xl">
+                    {pilar.pilar_numero === 1 && <TrendingUp className="h-6 w-6 text-primary" />}
+                    {pilar.pilar_numero === 2 && <Goal className="h-6 w-6 text-primary" />}
+                    {pilar.pilar_numero === 3 && <Milestone className="h-6 w-6 text-primary" />}
+                    {pilar.titulo_pilar}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="flex-grow space-y-3">
+                  <p className="text-muted-foreground">{pilar.descricao_pilar}</p>
+                  <div className="text-sm p-3 bg-slate-50 rounded-md">
+                    <p><span className='font-bold'>Exemplo:</span> {pilar.exemplo_pilar}</p>
+                  </div>
+                   <div className="text-sm p-3 bg-green-50 rounded-md border border-green-200">
+                    <p><span className='font-bold'>Quando aplicar:</span> {pilar.quando_aplicar}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* Conclusion */}
+        <section className="text-center bg-primary/10 p-8 rounded-xl mt-8">
+          <h2 className="font-headline text-2xl font-bold">{content.titulo_conclusao}</h2>
+          <p className="mt-2 text-muted-foreground max-w-3xl mx-auto">{content.texto_conclusao}</p>
+        </section>
+      </div>
+    );
+  };
 
 
   return (
@@ -255,7 +344,16 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
               </CardContent>
             </Card>
           ) : lesson.content ? (
-            lesson.content.titulo_cardapio ? <FoodPlanContent /> : <SelfAssessmentContent />
+              lesson.content.titulo_cardapio ? <FoodPlanContent /> 
+            : lesson.content.titulo_autoavaliacao ? <SelfAssessmentContent /> 
+            : lesson.content.titulo_aula ? <SafeProgressionContent />
+            : (
+              <Card>
+                <CardContent className="p-8 text-center">
+                  <p className="text-muted-foreground">O conteúdo desta aula estará disponível em breve.</p>
+                </CardContent>
+              </Card>
+            )
           ) : (
             <Card>
               <CardContent className="p-8 text-center">
