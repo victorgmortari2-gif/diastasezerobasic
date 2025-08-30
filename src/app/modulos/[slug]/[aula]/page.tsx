@@ -450,8 +450,14 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
         </section>
         
         {/* Premium Upgrade Section */}
-        <section className="mt-12">
-            <Card className="bg-primary text-primary-foreground border-2 border-accent shadow-xl">
+        <section className="mt-12 text-center">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold mb-2">
+              Sua Jornada Acaba de Começar. Que tal Ir Além?
+            </h2>
+            <p className="mt-4 max-w-3xl mx-auto text-muted-foreground md:text-xl mb-8">
+              Você tem todas as ferramentas para continuar por conta própria. Mas se você quer levar seus resultados a um novo nível, ter novos desafios, e se aprofundar ainda mais, preparei algo especial para você.
+            </p>
+            <Card className="bg-primary text-primary-foreground border-2 border-accent shadow-xl text-left">
               <CardContent className="p-6 md:p-10">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div>
