@@ -8,6 +8,16 @@ import Image from 'next/image';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
+export async function generateStaticParams() {
+  const params = modules.flatMap((module) =>
+    module.schedule.map((lesson) => ({
+      slug: module.slug,
+      aula: lesson.slug,
+    }))
+  );
+  return params;
+}
+
 export default function LessonPage({ params }: { params: { slug: string; aula: string } }) {
   const module = modules.find((m) => m.slug === params.slug);
   const lesson = module?.schedule.find((l) => l.slug === params.aula);

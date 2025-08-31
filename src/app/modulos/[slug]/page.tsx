@@ -7,6 +7,12 @@ import { ArrowLeft, CheckCircle, Video, BookText, Activity, GraduationCap } from
 import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 
+export async function generateStaticParams() {
+  return modules.map((module) => ({
+    slug: module.slug,
+  }));
+}
+
 export default function ModulePage({ params }: { params: { slug: string } }) {
   const module = modules.find((m) => m.slug === params.slug);
 
