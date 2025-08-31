@@ -21,7 +21,10 @@ export async function generateStaticParams() {
 export default function LessonPage({ params }: { params: { slug: string; aula: string } }) {
   const module = modules.find((m) => m.slug === params.slug);
   const lesson = module?.schedule.find((l) => l.slug === params.aula);
-  const nextModule = modules.find(m => m.slug === 'estabilidade');
+  const currentModuleIndex = modules.findIndex(m => m.slug === params.slug);
+  const nextModule = currentModuleIndex !== -1 && currentModuleIndex < modules.length - 1 ? modules[currentModuleIndex + 1] : null;
+  const commonErrorsModule = modules.find(m => m.slug === 'fortalecimento');
+
 
   if (!module || !lesson) {
     notFound();
@@ -309,6 +312,7 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
   const CommonErrorsContent = () => {
     if (!lesson.content) return null;
     const content = lesson.content;
+    const module3 = modules.find(m => m.slug === 'estabilidade');
 
     return (
       <div className="space-y-12">
@@ -354,9 +358,9 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
         <section className="text-center bg-primary/10 p-8 rounded-xl">
           <h2 className="font-headline text-2xl font-bold">{content.titulo_cta}</h2>
           <p className="mt-2 text-muted-foreground max-w-3xl mx-auto">{content.texto_cta}</p>
-          {nextModule && (
+          {module3 && (
             <Button size="lg" className="mt-6 font-bold text-lg animate-pulse-scale" asChild>
-              <Link href={`/modulos/${nextModule.slug}`}>
+              <Link href={`/modulos/${module3.slug}`}>
                  Ir para o Módulo 3 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
