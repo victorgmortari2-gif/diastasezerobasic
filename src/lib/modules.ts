@@ -107,7 +107,7 @@ export const modules: Module[] = [
     ],
     schedule: [
         { day: 15, slug: 'estabilidade-avancados', title: 'Exercícios de Estabilidade Avançados', type: 'Vídeo Aula', duration: '5 min', description: 'Desafios progressivos para consolidar a recuperação', videoUrl: 'https://www.youtube.com/embed/foNekEfsnos' },
-        { day: 16, slug: 'prancha-segura', title: 'Prancha e Variações Seguras', type: 'Exercício', duration: '18 min', description: 'Fortalecimento isométrico adaptado para diástase' },
+        { day: 16, slug: 'prancha-segura', title: 'Prancha e Variações Seguras', type: 'Exercício', duration: '18 min', description: 'Fortalecimento isométrico adaptado para diástase', videoUrl: 'https://www.youtube.com/embed/fV-ZPNOJx0U' },
         { day: 17, slug: 'resistencia-muscular', title: 'Construindo Resistência Muscular', type: 'Vídeo Aula', duration: '12 min', description: 'Estratégias para aumentar a resistência sem sobrecarga', videoUrl: 'https://www.youtube.com/embed/hHYXLiSUsCg' },
         { day: 18, slug: 'rotina-manutencao', title: 'Rotina Completa de Manutenção', type: 'Exercício', duration: '30 min', description: 'Sequência de exercícios para continuar após o programa' },
         { day: 19, slug: 'estrategias-longo-prazo', title: 'Estratégias de Longo Prazo', type: 'Material', duration: '12 min', description: 'Como manter os resultados e continuar progredindo', content: longTermStrategies },
