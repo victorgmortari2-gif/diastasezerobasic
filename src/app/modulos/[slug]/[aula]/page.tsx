@@ -262,7 +262,7 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
         {/* 3 Pillars */}
         <section>
           <h2 className="font-headline text-2xl font-bold text-center mb-6">{content.titulo_pilares}</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {content.lista_pilares.map((pilar: any) => (
               <Card key={pilar.pilar_numero} className="flex flex-col">
                 <CardHeader>
@@ -371,7 +371,7 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
         {/* Pillars */}
         <section>
           <h2 className="font-headline text-2xl font-bold text-center mb-8">{content.titulo_pilares}</h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {content.lista_pilares.map((pilar: any, index: number) => (
               <Card key={index} className="flex flex-col">
                 <CardHeader>
@@ -459,7 +459,7 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
             </p>
             <Card className="bg-primary text-primary-foreground border-2 border-accent shadow-xl text-left">
               <CardContent className="p-6 md:p-10">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                   <div>
                     <div className="inline-block bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-bold">
                       POR APENAS R$ 12,90
@@ -492,7 +492,7 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
                       <li className="flex gap-3"><CircleCheckBig className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Vida Real, Corpo Forte:</span> Guia de alimentação para mães e rotina de 20 minutos.</span></li>
                     </ul>
                     <h4 className="font-headline text-xl font-bold mt-6 mb-4">Super Bônus do Premium</h4>
-                    <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-sm">
                         <li className="flex items-center gap-2">✨ Todo conteúdo do Desafio Básico</li>
                         <li className="flex items-center gap-2">📚 E-book "Diástase Zero o Ano Todo"</li>
                         <li className="flex items-center gap-2">🧘 Meditação guiada</li>
@@ -534,7 +534,7 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
                 className='mx-auto'
             />
           </Link>
-          <div className="font-headline text-lg font-bold text-primary">Diástase Zero</div>
+          <div className="font-headline text-lg font-bold text-primary hidden sm:block">Diástase Zero</div>
         </div>
       </header>
 

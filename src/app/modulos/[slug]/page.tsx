@@ -45,7 +45,7 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
                 className='mx-auto'
             />
           </Link>
-          <div className="font-headline text-lg font-bold text-primary">Diástase Zero</div>
+          <div className="font-headline text-lg font-bold text-primary hidden sm:block">Diástase Zero</div>
         </div>
       </header>
       
@@ -61,7 +61,7 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
           <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-lg">{module.longDescription}</p>
         </section>
 
-        <div className="grid lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Main Content: Schedule */}
           <div className="lg:col-span-2">
             <h2 className="font-headline text-2xl font-bold mb-6">Conteúdo Programático da Semana</h2>
@@ -94,7 +94,7 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
           </div>
           
           {/* Sidebar: Objectives */}
-          <aside>
+          <aside className='lg:sticky lg:top-24 h-fit'>
             <div className="sticky top-24">
                 <Card className="bg-slate-50">
                     <CardHeader>

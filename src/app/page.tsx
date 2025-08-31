@@ -40,7 +40,7 @@ export default function Home() {
             <p className="mt-4 max-w-3xl mx-auto text-muted-foreground md:text-xl">
               Durante 21 dias, você terá acesso a módulos exclusivos que vão te guiar passo a passo para acabar com a diástase e conquistar um abdômen firme e saudável.
             </p>
-            <div className="mt-10 grid gap-8 md:grid-cols-3 max-w-5xl mx-auto">
+            <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <div className="flex flex-col items-center">
                 <TrendingUp className="h-10 w-10 text-primary" />
                 <h3 className="mt-4 font-bold text-xl font-headline">Progressivo</h3>
@@ -71,7 +71,7 @@ export default function Home() {
                         Um guia completo para você fortalecer seu abdômen e recuperar a confiança.
                     </p>
                 </div>
-                <div className="mt-12 grid gap-8 md:grid-cols-3">
+                <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
                     {modules.map((module) => {
                       const Icon = module.icon;
                       return (
@@ -115,7 +115,7 @@ export default function Home() {
             </div>
             <Card className="mt-10 bg-primary text-primary-foreground border-2 border-accent shadow-xl">
               <CardContent className="p-6 md:p-10">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                   <div>
                     <div className="inline-block bg-accent text-accent-foreground px-4 py-1 rounded-full text-sm font-bold">
                       POR APENAS R$ 12,90
@@ -148,7 +148,7 @@ export default function Home() {
                       <li className="flex gap-3"><CircleCheckBig className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" /><span><span className="font-bold">Vida Real, Corpo Forte:</span> Guia de alimentação para mães e rotina de 20 minutos.</span></li>
                     </ul>
                     <h4 className="font-headline text-xl font-bold mt-6 mb-4">Super Bônus do Premium</h4>
-                    <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-sm">
                         <li className="flex items-center gap-2">✨ Todo conteúdo do Desafio Básico</li>
                         <li className="flex items-center gap-2">📚 E-book "Diástase Zero o Ano Todo"</li>
                         <li className="flex items-center gap-2">🧘 Meditação guiada</li>
@@ -166,7 +166,7 @@ export default function Home() {
         <section className="py-12 md:py-24 bg-accent/20">
             <div className="container px-4 md:px-6">
                 <h2 className="text-center font-headline text-3xl md:text-4xl font-bold mb-4">Ofertas Exclusivas para Você</h2>
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
                     <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <CardHeader className="items-center">
                             <Gift className="h-10 w-10 text-primary" />
