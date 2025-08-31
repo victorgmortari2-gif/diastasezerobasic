@@ -323,7 +323,7 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
 
         {/* Common Errors */}
         <section>
-          <h3 className="font-headline text-2xl font-bold mb-6 text-green-700">{content.titulo_erros_comuns}</h3>
+          <h3 className="font-headline text-2xl font-bold mb-6">{content.titulo_erros_comuns}</h3>
           <div className="space-y-6">
             {content.lista_erros.map((erro: any, index: number) => (
               <Card key={index} className="overflow-hidden">
