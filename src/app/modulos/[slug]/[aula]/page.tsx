@@ -602,7 +602,9 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
                 <Card>
                 <CardContent className="p-6">
                     <p className="text-muted-foreground">
-                    Nesta aula, você aprenderá os pontos-chave sobre {lesson.title.toLowerCase()}. Abordaremos os conceitos fundamentais e as melhores práticas para garantir que você execute as técnicas corretamente e com segurança. Prepare-se para dar um passo importante na sua jornada de recuperação!
+                      {lesson.slug === 'desafio-final' 
+                        ? 'Este é o seu momento! Use esta aula para ver o quanto você evoluiu. Compare sua força, controle e consciência corporal com o primeiro dia. Sinta orgulho da sua jornada e do corpo forte que você está construindo. Você é incrível!'
+                        : `Nesta aula, você aprenderá os pontos-chave sobre ${lesson.title.toLowerCase()}. Abordaremos os conceitos fundamentais e as melhores práticas para garantir que você execute as técnicas corretamente e com segurança. Prepare-se para dar um passo importante na sua jornada de recuperação!`}
                     </p>
                 </CardContent>
                 </Card>

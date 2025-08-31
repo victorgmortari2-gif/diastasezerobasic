@@ -41,7 +41,7 @@ export const modules: Module[] = [
     ],
     longDescription: 'Neste primeiro módulo, você vai reaprender a se conectar com seu corpo. Focaremos na base da recuperação: a respiração correta e a ativação dos músculos profundos do abdômen, essenciais para reverter a diástase.',
     objectives: [
-        'Entender o que é a diástase e como ela afeta seu corpo.',
+        'Entender o que é a diástase и como ela afeta seu corpo.',
         'Dominar a técnica de respiração diafragmática.',
         'Aprender a ativar corretamente o transverso abdominal (seu "espartilho natural").',
         'Melhorar a postura com alongamentos específicos.',
@@ -111,7 +111,7 @@ export const modules: Module[] = [
         { day: 17, slug: 'resistencia-muscular', title: 'Construindo Resistência Muscular', type: 'Vídeo Aula', duration: '12 min', description: 'Estratégias para aumentar a resistência sem sobrecarga', videoUrl: 'https://www.youtube.com/embed/hHYXLiSUsCg' },
         { day: 18, slug: 'rotina-manutencao', title: 'Rotina Completa de Manutenção', type: 'Exercício', duration: '10 min', description: 'Sequência de exercícios para continuar após o programa', videoUrl: 'https://www.youtube.com/embed/fIRl19Hxl6I' },
         { day: 19, slug: 'estrategias-longo-prazo', title: 'Estratégias de Longo Prazo', type: 'Material', duration: '12 min', description: 'Como manter os resultados e continuar progredindo', content: longTermStrategies },
-        { day: 20, slug: 'desafio-final', title: 'Desafio Final - Teste de Progresso', type: 'Exercício', duration: '25 min', description: 'Avalie sua evolução com exercícios progressivos' },
+        { day: 20, slug: 'desafio-final', title: 'Desafio Final - Teste de Progresso', type: 'Exercício', duration: '25 min', description: 'Chegou a hora de comparar seus resultados iniciais com os de agora! Parabéns por chegar até aqui. Sua dedicação foi incrível!', videoUrl: 'https://www.youtube.com/embed/w5zRPC8UabE' },
         { day: 21, slug: 'planejamento-futuro', title: 'Planejamento Futuro', type: 'Avaliação', duration: '15 min', description: 'Crie seu plano personalizado de manutenção', content: planningFuture },
     ]
   },
