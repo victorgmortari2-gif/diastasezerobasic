@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -176,7 +177,11 @@ export default function Home() {
                             <p className="text-muted-foreground text-sm">Cardápio de 30 dias com receitas anti-inflamatórias, lista de compras e substituições.</p>
                             <p className="text-sm line-through text-muted-foreground mt-4">De R$ 23,90</p>
                             <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
-                            <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Adicionar ao meu acesso</Button>
+                            <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105" asChild>
+                              <Link href="https://go.tribopay.com.br/xxzyjsqss3" target="_blank">
+                                Adicionar ao meu acesso
+                              </Link>
+                            </Button>
                         </CardContent>
                     </Card>
                     <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
@@ -239,3 +244,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
