@@ -187,7 +187,7 @@ export default function Home() {
                     <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <CardHeader className="items-center">
                             <BookOpen className="h-10 w-10 text-primary" />
-                            <CardTitle className="text-center font-headline text-xl">E-book Premium + Guia de Roupas</CardTitle>
+                            <CardTitle className="text-center font-headline text-xl">Guia de Confiança e Estilo</CardTitle>
                         </CardHeader>
                         <CardContent className="text-center">
                             <p className="text-muted-foreground text-sm">Automassagem, postura e dicas de looks que afinam a silhueta e aumentam a confiança.</p>
