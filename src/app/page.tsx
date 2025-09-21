@@ -17,8 +17,8 @@ export default function Home() {
                     <Image 
                         src="https://i.imgur.com/VJtWx2S.png" 
                         alt="Diástase Zero Logo" 
-                        width={120} 
-                        height={120}
+                        width={150} 
+                        height={150}
                         className='mx-auto'
                     />
                 </div>
