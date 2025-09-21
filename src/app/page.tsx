@@ -181,7 +181,7 @@ export default function Home() {
                             <p className="text-sm line-through text-muted-foreground mt-4">De R$ 27,90</p>
                             <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
                             <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105" asChild>
-                              <Link href="https://go.tribopay.com.br/xxzyjsqss3" target="_blank">
+                              <Link href="https://go.tribopay.com.br/xxzyjsqss3" target="_blank" rel="noopener noreferrer">
                                 Adicionar ao meu acesso
                               </Link>
                             </Button>
