@@ -225,7 +225,7 @@ export default function Home() {
                     </Card>
                 </div>
                 <div className="mt-10 text-center">
-                    <Button size="lg" className="font-bold text-lg md:text-xl p-6 md:p-8 animate-pulse-scale">
+                    <Button size="lg" className="font-bold text-base md:text-xl p-6 animate-pulse-scale">
                         Adquira todas as ofertas por apenas R$ 39,90
                     </Button>
                 </div>
@@ -251,4 +251,5 @@ export default function Home() {
     
 
     
+
 
