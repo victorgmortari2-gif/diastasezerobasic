@@ -175,8 +175,8 @@ export default function Home() {
                         </CardHeader>
                         <CardContent className="text-center">
                             <p className="text-muted-foreground text-sm">Cardápio de 30 dias com receitas anti-inflamatórias, lista de compras e substituições.</p>
-                            <p className="text-sm line-through text-muted-foreground mt-4">De R$ 23,90</p>
-                            <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
+                            <p className="text-sm line-through text-muted-foreground mt-4">De R$ 27,90</p>
+                            <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
                             <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105" asChild>
                               <Link href="https://go.tribopay.com.br/xxzyjsqss3" target="_blank">
                                 Adicionar ao meu acesso
@@ -191,8 +191,8 @@ export default function Home() {
                         </CardHeader>
                         <CardContent className="text-center">
                             <p className="text-muted-foreground text-sm">Automassagem, postura e dicas de looks que afinam a silhueta e aumentam a confiança.</p>
-                            <p className="text-sm line-through text-muted-foreground mt-4">De R$ 23,90</p>
-                            <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
+                            <p className="text-sm line-through text-muted-foreground mt-4">De R$ 27,90</p>
+                            <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
                             <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Quero este guia</Button>
                         </CardContent>
                     </Card>
@@ -203,8 +203,8 @@ export default function Home() {
                         </CardHeader>
                         <CardContent className="text-center">
                             <p className="text-muted-foreground text-sm">Continuação de 60 dias com treinos, calendário e estratégias para manter os resultados.</p>
-                            <p className="text-sm line-through text-muted-foreground mt-4">De R$ 23,90</p>
-                            <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
+                            <p className="text-sm line-through text-muted-foreground mt-4">De R$ 27,90</p>
+                            <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
                             <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Continuar minha evolução</Button>
                         </CardContent>
                     </Card>
@@ -215,15 +215,15 @@ export default function Home() {
                         </CardHeader>
                         <CardContent className="text-center">
                             <p className="text-muted-foreground text-sm">Áudios de 5–10 min para autoestima, foco e constância. Mais disciplina e equilíbrio emocional.</p>
-                            <p className="text-sm line-through text-muted-foreground mt-4">De R$ 23,90</p>
-                            <p className="text-2xl font-bold text-primary">por apenas R$ 9,90</p>
+                            <p className="text-sm line-through text-muted-foreground mt-4">De R$ 27,90</p>
+                            <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
                             <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Adicionar meditações</Button>
                         </CardContent>
                     </Card>
                 </div>
                 <div className="mt-10 text-center">
                     <Button size="lg" className="font-bold text-2xl p-8 animate-pulse-scale">
-                        Adquira todas as ofertas por apenas R$ 18,90
+                        Adquira todas as ofertas por apenas R$ 39,90
                     </Button>
                 </div>
             </div>
