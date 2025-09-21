@@ -47,7 +47,7 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
                 src="https://i.imgur.com/VJtWx2S.png" 
                 alt="Diástase Zero Logo" 
                 width={200} 
-                height={200}
+                height={50}
                 className='mx-auto'
             />
           </Link>

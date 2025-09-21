@@ -210,11 +210,13 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
           <h2 className="font-headline text-2xl font-bold">{assessment.titulo_cta}</h2>
           <p className="mt-2 text-muted-foreground max-w-3xl mx-auto">{assessment.texto_cta}</p>
           {nextModule && (
-            <Button size="lg" className="mt-6 font-bold text-lg animate-pulse-scale" asChild>
-              <Link href={`/modulos/${nextModule.slug}`}>
-                {assessment.texto_botao_cta} <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
+            <div className="mt-6 flex justify-center">
+              <Button size="lg" className="font-bold text-lg animate-pulse-scale" asChild>
+                <Link href={`/modulos/${nextModule.slug}`}>
+                  {assessment.texto_botao_cta} <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </div>
           )}
         </section>
       </div>
@@ -544,7 +546,7 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
                 src="https://i.imgur.com/VJtWx2S.png" 
                 alt="Diástase Zero Logo" 
                 width={200} 
-                height={200}
+                height={50}
                 className='mx-auto'
             />
           </Link>

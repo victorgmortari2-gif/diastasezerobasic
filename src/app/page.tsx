@@ -18,7 +18,7 @@ export default function Home() {
                         src="https://i.imgur.com/VJtWx2S.png" 
                         alt="Diástase Zero Logo" 
                         width={200} 
-                        height={200}
+                        height={50}
                         className='mx-auto'
                     />
                 </div>
@@ -225,7 +225,7 @@ export default function Home() {
                     </Card>
                 </div>
                 <div className="mt-10 text-center">
-                    <Button size="lg" className="font-bold text-2xl p-8 animate-pulse-scale">
+                    <Button size="lg" className="font-bold text-lg md:text-xl p-6 md:p-8 animate-pulse-scale">
                         Adquira todas as ofertas por apenas R$ 39,90
                     </Button>
                 </div>
@@ -251,3 +251,4 @@ export default function Home() {
     
 
     
+
