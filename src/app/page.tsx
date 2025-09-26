@@ -175,7 +175,7 @@ export default function Home() {
                     <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <CardHeader className="items-center">
                             <Gift className="h-10 w-10 text-primary" />
-                            <CardTitle className="text-center font-headline text-xl">Plano Alimentar Personalizado</CardTitle>
+                            <CardTitle className="text-center font-headline text-xl">Plano Alimentar (Secreto) para Desinchar e Ter Mais Energia</CardTitle>
                         </CardHeader>
                         <CardContent className="text-center">
                             <p className="text-muted-foreground text-sm">Cardápio de 30 dias com receitas anti-inflamatórias, lista de compras e substituições.</p>
@@ -248,5 +248,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
