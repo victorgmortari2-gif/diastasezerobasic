@@ -51,7 +51,7 @@ export default function ModulePage({ params }: { params: { slug: string } }) {
                 className='mx-auto'
             />
           </Link>
-          <div className="font-headline text-lg font-bold text-primary hidden sm:block">Diástase Zero</div>
+          <div className="w-[170px]"></div>
         </div>
       </header>
       

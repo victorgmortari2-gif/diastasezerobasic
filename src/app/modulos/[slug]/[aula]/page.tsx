@@ -212,7 +212,7 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
           <p className="mt-2 text-muted-foreground max-w-3xl mx-auto">{assessment.texto_cta}</p>
           {nextModule && (
             <div className="mt-6 flex justify-center">
-              <Button size="lg" className="font-bold text-lg animate-pulse-scale" asChild>
+              <Button size="lg" className="font-bold text-lg animate-pulse-scale px-6 py-3 h-auto" asChild>
                 <Link href={`/modulos/${nextModule.slug}`}>
                   {assessment.texto_botao_cta} <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
@@ -553,7 +553,7 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
                 className='mx-auto'
             />
           </Link>
-          <div className="font-headline text-lg font-bold text-primary hidden sm:block">Diástase Zero</div>
+          <div className="w-[170px]"></div>
         </div>
       </header>
 
