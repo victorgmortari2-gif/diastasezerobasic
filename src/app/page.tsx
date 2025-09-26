@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -15,7 +14,7 @@ export default function Home() {
             <div className="container px-4 md:px-6">
                 <div className="flex justify-center mb-6">
                     <Image 
-                        src="https://i.imgur.com/VJtWx2S.png" 
+                        src="https://i.imgur.com/MR1cyee.png"
                         alt="Diástase Zero Logo" 
                         width={200} 
                         height={50}
@@ -225,7 +224,7 @@ export default function Home() {
                     </Card>
                 </div>
                 <div className="mt-10 text-center">
-                    <Button size="lg" className="font-bold text-base md:text-xl p-6 animate-pulse-scale">
+                    <Button size="lg" className="font-bold text-base md:text-xl p-6 md:p-8 animate-pulse-scale">
                         Adquira todas as ofertas por apenas R$ 39,90
                     </Button>
                 </div>
@@ -247,9 +246,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-
-    
-
-

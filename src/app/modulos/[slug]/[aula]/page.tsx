@@ -150,6 +150,7 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
   const SelfAssessmentContent = () => {
     if (!lesson.content) return null;
     const assessment = lesson.content;
+    const nextModule = modules.find(m => m.slug === 'fortalecimento');
 
     return (
       <div className="space-y-12">
@@ -543,7 +544,7 @@ export default function LessonPage({ params }: { params: { slug: string; aula: s
           </Button>
           <Link href="/">
             <Image 
-                src="https://i.imgur.com/VJtWx2S.png" 
+                src="https://i.imgur.com/MR1cyee.png"
                 alt="Diástase Zero Logo" 
                 width={200} 
                 height={50}
