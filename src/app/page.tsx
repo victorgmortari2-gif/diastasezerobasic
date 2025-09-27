@@ -223,13 +223,17 @@ export default function Home() {
                     <Card className="flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <CardHeader className="items-center">
                             <Zap className="h-10 w-10 text-primary" />
-                            <CardTitle className="text-center font-headline text-xl">Meditações Guiadas "Mente Poderosa, Corpo Confiante"</CardTitle>
+                            <CardTitle className="text-center font-headline text-xl">Meditações Guiadas "Mente em Foco, Corpo em Harmonia"</CardTitle>
                         </CardHeader>
                         <CardContent className="flex-grow flex flex-col text-center">
                             <p className="text-muted-foreground text-sm flex-grow">Sua transformação começa de dentro. Áudios de 10-25 min para construir disciplina inabalável e blindar sua autoestima. É o equilíbrio emocional que garante sua constância e os seus resultados.</p>
                             <p className="text-sm line-through text-muted-foreground mt-4">De R$ 27,90</p>
                             <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
-                            <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Adicionar meditações</Button>
+                            <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105" asChild>
+                                <Link href="https://go.tribopay.com.br/prbluqfcdj" target="_blank" rel="noopener noreferrer">
+                                    Adicionar meditações
+                                </Link>
+                            </Button>
                         </CardContent>
                     </Card>
                 </div>
