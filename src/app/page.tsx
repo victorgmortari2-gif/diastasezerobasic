@@ -191,7 +191,7 @@ export default function Home() {
                     <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <CardHeader className="items-center">
                             <BookOpen className="h-10 w-10 text-primary" />
-                            <CardTitle className="text-center font-headline text-xl">Guia de Confiança e Estilo</CardTitle>
+                            <CardTitle className="text-center font-headline text-xl">Guia Definitivo Para Vestir o que Você Ama</CardTitle>
                         </CardHeader>
                         <CardContent className="text-center">
                             <p className="text-muted-foreground text-sm">Automassagem, postura e dicas de looks que afinam a silhueta e aumentam a confiança.</p>
@@ -203,10 +203,10 @@ export default function Home() {
                     <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <CardHeader className="items-center">
                             <Award className="h-10 w-10 text-primary" />
-                            <CardTitle className="text-center font-headline text-xl">Programa Pós-Desafio</CardTitle>
+                            <CardTitle className="text-center font-headline text-xl">Protocolo ZeroCelulite</CardTitle>
                         </CardHeader>
                         <CardContent className="text-center">
-                            <p className="text-muted-foreground text-sm">Continuação de 60 dias com treinos, calendário e estratégias para manter os resultados.</p>
+                            <p className="text-muted-foreground text-sm">Chegou o momento de encerrar o ciclo das inseguranças. O PROTOCOLO ZERO CELULITE oferece o caminho mais rápido e eficaz para conquistar a pele que você sempre desejou.</p>
                             <p className="text-sm line-through text-muted-foreground mt-4">De R$ 27,90</p>
                             <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
                             <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Continuar minha evolução</Button>
@@ -215,7 +215,7 @@ export default function Home() {
                     <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <CardHeader className="items-center">
                             <Zap className="h-10 w-10 text-primary" />
-                            <CardTitle className="text-center font-headline text-xl">Pack de Meditações Guiadas</CardTitle>
+                            <CardTitle className="text-center font-headline text-xl">Meditações Guiadas "Mente Poderosa, Corpo Confiante"</CardTitle>
                         </CardHeader>
                         <CardContent className="text-center">
                             <p className="text-muted-foreground text-sm">Áudios de 5–10 min para autoestima, foco e constância. Mais disciplina e equilíbrio emocional.</p>
