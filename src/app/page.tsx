@@ -178,7 +178,7 @@ export default function Home() {
                             <CardTitle className="text-center font-headline text-xl">Plano Alimentar (Secreto) para Desinchar</CardTitle>
                         </CardHeader>
                         <CardContent className="flex-grow flex flex-col text-center">
-                            <p className="text-muted-foreground text-sm flex-grow">Cardápio de 30 dias com receitas anti-inflamatórias, lista de compras e substituições.</p>
+                            <p className="text-muted-foreground text-sm flex-grow">Descubra o poder do Plano Alimentar Secreto, seu guia de 30 dias para uma vida sem inchaço e inflamação, com lista de compras e substituições..</p>
                             <p className="text-sm line-through text-muted-foreground mt-4">De R$ 27,90</p>
                             <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
                             <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105" asChild>
