@@ -194,7 +194,7 @@ export default function Home() {
                             <CardTitle className="text-center font-headline text-xl">Guia Definitivo Para Vestir o que Você Ama</CardTitle>
                         </CardHeader>
                         <CardContent className="flex-grow flex flex-col text-center">
-                            <p className="text-muted-foreground text-sm flex-grow">Automassagem, postura e dicas de looks que afinam a silhueta e aumentam a confiança.</p>
+                            <p className="text-muted-foreground text-sm flex-grow">Técnicas de Automassagem para um corpo leve, os segredos de postura que alongam a silhueta, e dicas de looks que te fazem sentir imparável. Sua confiança é o melhor acessório.</p>
                             <p className="text-sm line-through text-muted-foreground mt-4">De R$ 27,90</p>
                             <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
                             <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Quero este guia</Button>
