@@ -218,7 +218,7 @@ export default function Home() {
                             <CardTitle className="text-center font-headline text-xl">Meditações Guiadas "Mente Poderosa, Corpo Confiante"</CardTitle>
                         </CardHeader>
                         <CardContent className="flex-grow flex flex-col text-center">
-                            <p className="text-muted-foreground text-sm flex-grow">Áudios de 5–10 min para autoestima, foco e constância. Mais disciplina e equilíbrio emocional.</p>
+                            <p className="text-muted-foreground text-sm flex-grow">Sua transformação começa de dentro. Áudios de 10-25 min para construir disciplina inabalável e blindar sua autoestima. É o equilíbrio emocional que garante sua constância e os seus resultados.</p>
                             <p className="text-sm line-through text-muted-foreground mt-4">De R$ 27,90</p>
                             <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
                             <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Adicionar meditações</Button>
