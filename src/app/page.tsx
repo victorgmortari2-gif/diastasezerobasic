@@ -238,8 +238,10 @@ export default function Home() {
                     </Card>
                 </div>
                 <div className="mt-10 text-center">
-                    <Button size="lg" className="font-bold text-base md:text-xl p-6 md:p-8 animate-pulse-scale">
+                    <Button size="lg" className="font-bold text-base md:text-xl p-6 md:p-8 animate-pulse-scale" asChild>
+                      <Link href="https://go.tribopay.com.br/bvyaujeoan" target="_blank" rel="noopener noreferrer">
                         Adquira todas as ofertas por apenas R$ 39,90
+                      </Link>
                     </Button>
                 </div>
             </div>
