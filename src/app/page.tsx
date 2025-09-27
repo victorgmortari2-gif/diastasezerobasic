@@ -213,7 +213,11 @@ export default function Home() {
                             <p className="text-muted-foreground text-sm flex-grow">Chegou o momento de encerrar o ciclo das inseguranças. O PROTOCOLO ZERO CELULITE oferece o caminho mais rápido e eficaz para conquistar a pele que você sempre desejou.</p>
                             <p className="text-sm line-through text-muted-foreground mt-4">De R$ 27,90</p>
                             <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
-                            <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Continuar minha evolução</Button>
+                            <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105" asChild>
+                              <Link href="https://go.tribopay.com.br/nasud6qmbv" target="_blank" rel="noopener noreferrer">
+                                Continuar minha evolução
+                              </Link>
+                            </Button>
                         </CardContent>
                     </Card>
                     <Card className="flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
