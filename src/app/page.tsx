@@ -16,8 +16,8 @@ export default function Home() {
                     <Image 
                         src="https://i.imgur.com/MR1cyee.png"
                         alt="Diástase Zero Logo" 
-                        width={200} 
-                        height={50}
+                        width={250} 
+                        height={62.5}
                         className='mx-auto'
                     />
                 </div>
@@ -172,13 +172,13 @@ export default function Home() {
                     <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-lg">Potencialize sua jornada com ferramentas e guias que vão acelerar seus resultados.</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
-                    <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <Card className="flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <CardHeader className="items-center">
                             <Gift className="h-10 w-10 text-primary" />
                             <CardTitle className="text-center font-headline text-xl">Plano Alimentar (Secreto) para Desinchar</CardTitle>
                         </CardHeader>
-                        <CardContent className="text-center">
-                            <p className="text-muted-foreground text-sm">Cardápio de 30 dias com receitas anti-inflamatórias, lista de compras e substituições.</p>
+                        <CardContent className="flex-grow flex flex-col text-center">
+                            <p className="text-muted-foreground text-sm flex-grow">Cardápio de 30 dias com receitas anti-inflamatórias, lista de compras e substituições.</p>
                             <p className="text-sm line-through text-muted-foreground mt-4">De R$ 27,90</p>
                             <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
                             <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105" asChild>
@@ -188,37 +188,37 @@ export default function Home() {
                             </Button>
                         </CardContent>
                     </Card>
-                    <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <Card className="flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <CardHeader className="items-center">
                             <BookOpen className="h-10 w-10 text-primary" />
                             <CardTitle className="text-center font-headline text-xl">Guia Definitivo Para Vestir o que Você Ama</CardTitle>
                         </CardHeader>
-                        <CardContent className="text-center">
-                            <p className="text-muted-foreground text-sm">Automassagem, postura e dicas de looks que afinam a silhueta e aumentam a confiança.</p>
+                        <CardContent className="flex-grow flex flex-col text-center">
+                            <p className="text-muted-foreground text-sm flex-grow">Automassagem, postura e dicas de looks que afinam a silhueta e aumentam a confiança.</p>
                             <p className="text-sm line-through text-muted-foreground mt-4">De R$ 27,90</p>
                             <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
                             <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Quero este guia</Button>
                         </CardContent>
                     </Card>
-                    <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <Card className="flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <CardHeader className="items-center">
                             <Award className="h-10 w-10 text-primary" />
                             <CardTitle className="text-center font-headline text-xl">Protocolo ZeroCelulite</CardTitle>
                         </CardHeader>
-                        <CardContent className="text-center">
-                            <p className="text-muted-foreground text-sm">Chegou o momento de encerrar o ciclo das inseguranças. O PROTOCOLO ZERO CELULITE oferece o caminho mais rápido e eficaz para conquistar a pele que você sempre desejou.</p>
+                        <CardContent className="flex-grow flex flex-col text-center">
+                            <p className="text-muted-foreground text-sm flex-grow">Chegou o momento de encerrar o ciclo das inseguranças. O PROTOCOLO ZERO CELULITE oferece o caminho mais rápido e eficaz para conquistar a pele que você sempre desejou.</p>
                             <p className="text-sm line-through text-muted-foreground mt-4">De R$ 27,90</p>
                             <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
                             <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Continuar minha evolução</Button>
                         </CardContent>
                     </Card>
-                    <Card className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <Card className="flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <CardHeader className="items-center">
                             <Zap className="h-10 w-10 text-primary" />
                             <CardTitle className="text-center font-headline text-xl">Meditações Guiadas "Mente Poderosa, Corpo Confiante"</CardTitle>
                         </CardHeader>
-                        <CardContent className="text-center">
-                            <p className="text-muted-foreground text-sm">Áudios de 5–10 min para autoestima, foco e constância. Mais disciplina e equilíbrio emocional.</p>
+                        <CardContent className="flex-grow flex flex-col text-center">
+                            <p className="text-muted-foreground text-sm flex-grow">Áudios de 5–10 min para autoestima, foco e constância. Mais disciplina e equilíbrio emocional.</p>
                             <p className="text-sm line-through text-muted-foreground mt-4">De R$ 27,90</p>
                             <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
                             <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Adicionar meditações</Button>
