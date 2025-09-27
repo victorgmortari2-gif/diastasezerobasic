@@ -197,7 +197,11 @@ export default function Home() {
                             <p className="text-muted-foreground text-sm flex-grow">Técnicas de Automassagem para um corpo leve, os segredos de postura que alongam a silhueta, e dicas de looks que te fazem sentir imparável. Sua confiança é o melhor acessório.</p>
                             <p className="text-sm line-through text-muted-foreground mt-4">De R$ 27,90</p>
                             <p className="text-2xl font-bold text-primary">por apenas R$ 14,90</p>
-                            <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105">Quero este guia</Button>
+                            <Button className="mt-4 w-full transition-transform duration-300 hover:scale-105" asChild>
+                              <Link href="https://go.tribopay.com.br/b0qxhlcuaf" target="_blank" rel="noopener noreferrer">
+                                Quero este guia
+                              </Link>
+                            </Button>
                         </CardContent>
                     </Card>
                     <Card className="flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
