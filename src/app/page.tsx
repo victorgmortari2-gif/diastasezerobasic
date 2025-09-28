@@ -207,7 +207,7 @@ export default function Home() {
                     <Card className="flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                         <CardHeader className="items-center">
                             <Award className="h-10 w-10 text-primary" />
-                            <CardTitle className="text-center font-headline text-xl">Protocolo ZeroCelulite</CardTitle>
+                            <CardTitle className="text-center font-headline text-xl">Protocolo Zero Celulite</CardTitle>
                         </CardHeader>
                         <CardContent className="flex-grow flex flex-col text-center">
                             <p className="text-muted-foreground text-sm flex-grow">Chegou o momento de encerrar o ciclo das inseguranças. O PROTOCOLO ZERO CELULITE oferece o caminho mais rápido e eficaz para conquistar a pele que você sempre desejou.</p>
