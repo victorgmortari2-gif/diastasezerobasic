@@ -221,9 +221,12 @@ export default function Home() {
                         </CardContent>
                     </Card>
                     <Card className="flex flex-col transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                        <CardHeader className="items-center">
-                            <Zap className="h-10 w-10 text-primary" />
-                            <CardTitle className="text-center font-headline text-xl">Meditações Guiadas "Mente em Foco, Corpo em Harmonia"</CardTitle>
+                        <CardHeader className="items-center text-center">
+                            <div className="flex justify-center">
+                                <Zap className="h-10 w-10 text-primary" />
+                            </div>
+                            <CardTitle className="font-headline text-xl">Inner Journey – Meditações Guiadas</CardTitle>
+                            <CardDescription>(Mente em Foco, Corpo em Harmonia)</CardDescription>
                         </CardHeader>
                         <CardContent className="flex-grow flex flex-col text-center">
                             <p className="text-muted-foreground text-sm flex-grow">Sua transformação começa de dentro. Áudios de 10-25 min para construir disciplina inabalável e blindar sua autoestima. É o equilíbrio emocional que garante sua constância e os seus resultados.</p>
