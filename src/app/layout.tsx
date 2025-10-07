@@ -1,7 +1,6 @@
 import type {Metadata} from 'next';
 import { Toaster } from "@/components/ui/toaster";
 import './globals.css';
-import PageTransition from '@/components/PageTransition';
 
 export const metadata: Metadata = {
   title: 'Diástase ZERO',
@@ -21,9 +20,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className="antialiased">
-        <PageTransition>
-          {children}
-        </PageTransition>
+        {children}
         <Toaster />
       </body>
     </html>
